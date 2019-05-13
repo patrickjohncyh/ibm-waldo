@@ -9,17 +9,54 @@ from sklearn.preprocessing import OneHotEncoder
 from Models import lstm,c3d_model,c3d_sports,fcn
 from tqdm import tqdm
 from keras.utils import to_categorical
-# from keras.models import load_
+
+class DataGenerator(keras.utils.Sequence):
+
+	def __init__(self, df,  batch_size=32, num_frames = 30, dim=2048, n_channels=1, shuffle=True):
+	    # 'Initialization'
+		self.transform = None
+		self.dim = dim
+		self.batch_size = batch_size
+		self.n_channels = n_channels
+		self.shuffle = shuffle
+		self.df = df
+		self.num_frames = num_frames
+		self.on_epoch_end()
+	def __len__(self):
+		'''Denotes the number of batches per epoch'''
+		return int(np.floor(self.df.shape[0]/self.batch_size))
+
+	def __getitem__(self, index):
+		y = []
+		df_batch = self.df[index*self.batch_size:(index+1)*self.batch_size]
+		X =  np.empty((self.batch_size , self.num_frames , self.dim), dtype=np.uint8)
+		for i in range (0,self.batch_size,1):
+			v,label,num_frames = df_batch.iloc[i]
+			path = 'jester-data/jester-features/'+str(v)
+			frame3d = np.load(path+"-"+"features-inception" + ".npy")[:self.num_frames]
+			X[i] = frame3d
+			y.append(label)
+		
+		label_encoder = LabelEncoder()
+		y = label_encoder.fit_transform(y)	
+		return X,to_categorical(y,num_classes=8)
+			
+	def on_epoch_end(self):
+		# 'Updates indexes after each epoch'
+		self.df = self.df.sample(frac=1.0)
 
 def get_training_data():
-	df = pd.read_csv( 'jester-v1-train-five.csv',index_col = None,header=None,sep=';')
+	df = pd.read_csv( 'jester-v3-train-five.csv',index_col = None,header=None,sep=';') #v1 for 4 classes, v2 for 6
 	df.columns = ['Folder','Action','Frames']
-	mask = (df['Frames']>=30) #& ( (df['Action'] == 'Swiping Right') | (df['Action'] == 'Swiping Down') )
-	df = df[mask].head(14700)
+	mask = (df['Frames']>=30) & ( (df['Action'] == 'Swiping Right') | (df['Action'] == 'Swiping Down') 
+								| (df['Action'] == 'Thumb Up') | (df['Action'] == 'Shaking Hand') 
+								| (df['Action']=='Sliding Two Fingers Down') | (df['Action']=='Drumming Fingers') 
+								| (df['Action']=='Turning Hand Counterclockwise') | (df['Action']=='Pushing Two Fingers Away'))
+	df = df[mask].head(29300)
 	X = []
 	y = []
 
-	pbar = tqdm(total=14700)
+	pbar = tqdm(total=29300)
 	for idx,row in df.iterrows():
 		v,label,num_frames = row
 		feature_path = os.path.join('jester-data','jester-features',str(v)+'-'+'features-inception'+'.npy')
@@ -118,6 +155,15 @@ def get_training_data_imgs():
 # 		# 'Updates indexes after each epoch'
 # 		self.df = self.df.sample(frac=1.0)
 
+df = pd.read_csv( 'jester-v3-train-five.csv',index_col = None,header=None,sep=';') #v1 for 4 classes, v2 for 6
+df.columns = ['Folder','Action','Frames']
+mask = (df['Frames']>=30) & ( (df['Action'] == 'Swiping Right') | (df['Action'] == 'Swiping Down') 
+								| (df['Action'] == 'Thumb Up') | (df['Action'] == 'Shaking Hand') 
+								| (df['Action']=='Sliding Two Fingers Down') | (df['Action']=='Drumming Fingers') 
+								| (df['Action']=='Turning Hand Counterclockwise') | (df['Action']=='Pushing Two Fingers Away'))
+df = df[mask].head(29300)
+dftrain = df.head(int(len(df)*0.8))
+dfval = df.tail(int(len(df)*0.2))
 
 
 model = lstm()
@@ -127,20 +173,21 @@ model = lstm()
 
 
 
-X,y = get_training_data()
-model.fit(X,
- 		  y,
- 		  verbose=1,
- 		  epochs=100,
- 		  validation_split=0.2)
+#X,y = get_training_data()
+#model.fit(X,
+# 		  y,
+# 		  verbose=1,
+# 		  epochs=100,
+# 		  validation_split=0.2)
 
 
 
-# model.fit_generator(
-# 	DataGenerator(df),
-# 	verbose=1,
-# 	epochs=100
-# )
+model.fit_generator(
+	DataGenerator(dftrain),
+	validation_data=DataGenerator(dfval),
+	verbose=1,
+	epochs=100,
+)
 
 # X,y = get_training_data()
 # model.fit(X,

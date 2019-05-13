@@ -11,7 +11,7 @@ import os
 
 from Models import c3d_sports
 
-class Extractor():
+class ExtractorMobileNet():
     def __init__(self):
         """Either load pretrained from imagenet, or load our saved
         weights from our own training."""
