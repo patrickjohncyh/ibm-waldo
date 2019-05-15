@@ -1,30 +1,31 @@
 import os
 import numpy as np
 import pandas as pd
+import tensorflow as tf
 import keras
 
 from keras.preprocessing import image
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import OneHotEncoder
-from Models import lstm,c3d_model,c3d_sports,fcn,seqlstm
-from tqdm import tqdm
 from keras.utils import to_categorical
 
-df = pd.read_csv( 'jester-v4-train-five.csv',index_col = None,header=None,sep=';') #v1 for 4 classes, v2 for 6
+from sklearn.preprocessing import LabelEncoder,OneHotEncoder
+
+from tqdm import tqdm
+
+from Models import lstm,seqlstm,c3d_sports
 
 class DataGenerator(keras.utils.Sequence):
-
 	def __init__(self, df,  batch_size=32, num_frames = 30, dim=2048, n_channels=1, shuffle=True): 
-		#dim = 2048 for inception, 1280 for mobilenet
-	    # 'Initialization'
+	    # Initialization
 		self.transform = None
 		self.dim = dim
 		self.batch_size = batch_size
 		self.n_channels = n_channels
 		self.shuffle = shuffle
 		self.df = df
-		self.num_frames = num_frames
+		self.num_frames  = num_frames
+		self.num_classes = len(df['Action'].unique())
 		self.on_epoch_end()
+
 	def __len__(self):
 		'''Denotes the number of batches per epoch'''
 		return int(np.floor(self.df.shape[0]/self.batch_size))
@@ -33,16 +34,12 @@ class DataGenerator(keras.utils.Sequence):
 		y = []
 		df_batch = self.df[index*self.batch_size:(index+1)*self.batch_size]
 		X =  np.empty((self.batch_size , self.num_frames , self.dim), dtype=np.uint8)
+		path = 'jester-data/jester-features/'
 		for i in range (0,self.batch_size,1):
 			v,label,num_frames = df_batch.iloc[i]
-			path = 'jester-data/jester-features/'+str(v)
-			frame3d = np.load(path+"-"+"features-mobilenet" + ".npy")[:self.num_frames]
-			X[i] = frame3d
-			y.append(label)
-		
-		label_encoder = LabelEncoder()
-		y = label_encoder.fit_transform(y)	
-		return X,to_categorical(y,num_classes=6)
+			X[i] = np.load(path+str(v)+"-"+"features-mobilenet" + ".npy")[:self.num_frames]
+		y = to_categorical(df_batch['Action'].values,num_classes=self.num_classes)
+		return X,y
 			
 	def on_epoch_end(self):
 		# 'Updates indexes after each epoch'
@@ -80,15 +77,24 @@ def get_training_data():
 	return X,y
 
 
-df.columns = ['Folder','Action','Frames']
-mask = (df['Frames']>=30) & 	((df['Action']=='Swiping Left') | (df['Action']=='Swiping Down') |
-								(df['Action']=='Thumb Up')     | (df['Action']=='No gesture') |
-								(df['Action']=='Rolling Hand Backward') | (df['Action']=='Zooming Out With Full Hand') )
+
+df = pd.read_csv( 'jester-train.csv',
+					index_col = None,
+					header=None,
+					sep=';',
+					names=['Folder','Action','Frames'])
 
 
-df = df[mask].head(40000)
+mask = (df['Frames']>=30) & ((df['Action']=='Swiping Left') | (df['Action']=='Swiping Down') |
+							(df['Action']=='Thumb Up')      | (df['Action']=='No gesture') |
+							(df['Action']=='Rolling Hand Backward') | (df['Action']=='Zooming Out With Full Hand') )
+df = df[mask]
+label_encoder = LabelEncoder()
+integer_encoded = label_encoder.fit_transform(df['Action'])
+df['Action'] = integer_encoded
+
 dftrain = df.head(int(len(df)*0.8))
-dfval = df.tail(int(len(df)*0.2))
+dfval   = df.tail(int(len(df)*0.2))
 
 model = seqlstm()
 model.summary()
@@ -100,8 +106,8 @@ model.fit_generator(
 	epochs=100,
 )
 
-# model = c3d_sports()
 
+# model = c3d_sports()
 # X,y = get_training_data()
 # model.fit(X,
 #  		  y,

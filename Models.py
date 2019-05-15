@@ -1,22 +1,50 @@
 import numpy as np
-from keras.models import Sequential
-from keras.layers.recurrent import LSTM
-from keras.layers import Dense,Dropout,MaxPooling3D,ZeroPadding3D
-from keras.layers import LeakyReLU,ReLU,Conv3D,Flatten,Conv2D,Lambda
-from keras.optimizers import Adam,SGD
+import tensorflow as tf
+
 import keras.backend as K
-from keras.layers import Dense,Dropout,Conv3D,Input,MaxPool3D,Flatten,Activation
-from keras.regularizers import l2
+
+from keras.models import Sequential
 from keras.models import Model
+
+from keras.layers import Input,Flatten,Dense,Dropout,Activation
+from keras.layers import Conv2D
+from keras.layers import Conv3D,MaxPooling3D,ZeroPadding3D,MaxPool3D
+from keras.layers import LeakyReLU,ReLU,Lambda
+from keras.optimizers import Adam,SGD
+from keras.layers.recurrent import LSTM
+from keras.regularizers import l2
+
 from keras.applications.mobilenet_v2 import MobileNetV2
 
-import tensorflow as tf
+
+def lstm():
+    """
+    Simple LSTM network. 
+    Pass the extracted features from CNN to this model.
+    Perform L2 normalisation to input feature vector
+    """
+    model = Sequential()
+    model.add(Lambda(lambda x: K.l2_normalize(x,axis=-1), input_shape= (30,1280)))
+    model.add(LSTM(512, return_sequences=False,
+                   input_shape= (30,1280), #1280 for mobilenet, 2048 for inception and exception
+                   dropout=0.5))
+    model.add(Dense(512, activation='relu'))
+    model.add(Dropout(0.5))
+    model.add(Dense(6, activation='softmax'))
+
+    model.compile(loss='categorical_crossentropy',
+                  optimizer=Adam(),
+                  metrics=['accuracy'])
+    return model
 
 
 def seqlstm():
-    """Build a simple LSTM network. We pass the extracted features from
-    our CNN to this model predomenently."""
-    # Model .
+    """
+    Simple LSTM network.
+    Output for each LSTM unit is used and average is used as prediction
+    Pass the extracted features from CNN to this model.
+    Perform L2 normalisation to input feature vector
+    """
     model = Sequential()
     model.add(Lambda(lambda x: K.l2_normalize(x,axis=-1), input_shape= (30,1280)))
     model.add(LSTM(512, return_sequences=True,
@@ -31,24 +59,7 @@ def seqlstm():
                   optimizer=Adam(),
                   metrics=['accuracy'])
     return model
-    
-def lstm():
-    """Build a simple LSTM network. We pass the extracted features from
-    our CNN to this model predomenently."""
-    # Model .
-    model = Sequential()
-    model.add(Lambda(lambda x: K.l2_normalize(x,axis=-1), input_shape= (30,1280)))
-    model.add(LSTM(512, return_sequences=False,
-                   input_shape= (30,1280), #1280 for mobilenet, 2048 for inception and exception
-                   dropout=0.5))
-    model.add(Dense(512, activation='relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(6, activation='softmax'))
 
-    model.compile(loss='categorical_crossentropy',
-                  optimizer=Adam(),
-                  metrics=['accuracy'])
-    return model
 
 def c3d_sports():
 
