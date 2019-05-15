@@ -1,5 +1,6 @@
 /__pycache__
+/pretrained_weights/*
+
 
 jester-data
-
-/pretrained_weights/*
+sftp-config.json
