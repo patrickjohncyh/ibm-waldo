@@ -31,6 +31,7 @@ class DataGenerator(keras.utils.Sequence):
 		return int(np.floor(self.df.shape[0]/self.batch_size))
 
 	def __getitem__(self, index):
+		'''Returns Training Data for a Single Batch'''
 		y = []
 		df_batch = self.df[index*self.batch_size:(index+1)*self.batch_size]
 		X =  np.empty((self.batch_size , self.num_frames , self.dim), dtype=np.uint8)
@@ -42,12 +43,49 @@ class DataGenerator(keras.utils.Sequence):
 		return X,y
 			
 	def on_epoch_end(self):
+		'''Updates indexes after each epoch'''
+		self.df = self.df.sample(frac=1.0)
+
+
+class DataGeneratorF(keras.utils.Sequence):
+	def __init__(self, df,  batch_size=32, num_frames = 30, dim=(112,122), n_channels=3, shuffle=True): 
+	    # Initialization
+		self.transform = None
+		self.dim = dim
+		self.batch_size = batch_size
+		self.n_channels = n_channels
+		self.shuffle = shuffle
+		self.df = df
+		self.num_frames  = num_frames
+		self.num_classes = len(df['Action'].unique())
+		self.path = os.path.join('jester-data','20bn-jester-v1')
+		self.on_epoch_end()
+
+	def __len__(self):
+		'''Denotes the number of batches per epoch'''
+		return int(np.floor(self.df.shape[0]/self.batch_size))
+
+	def __getitem__(self, index):
+		y = []
+		df_batch = self.df[index*self.batch_size:(index+1)*self.batch_size]
+		X =  np.empty((self.batch_size,self.num_frames,) + self.dim + (self.n_channels,), dtype=np.uint8)
+		for i in range (0,self.batch_size,1):
+			v,label,num_frames = df_batch.iloc[i]
+			folder_path = self.path+"/"+str(v)	
+			files = np.sort(np.array([os.path.splitext(filename)[0] for filename in os.listdir(folder_path)]))
+			files = files[:self.num_frames]
+			X[i] = [image.img_to_array(image.load_img(folder_path+"/"+str(f)+".jpg", target_size=self.dim)) for f in files]
+		y = to_categorical(df_batch['Action'].values,num_classes=self.num_classes)
+		return X,y
+			
+	def on_epoch_end(self):
 		# 'Updates indexes after each epoch'
 		self.df = self.df.sample(frac=1.0)
 
+
 def get_training_data(df):
-	
-	df = df[mask].head(6000)
+	num_classes = len(df['Action'].unique())
+	df = df.head(6000)
 	df = df.values
 	X =  np.empty((6000,30,112,112,3),dtype=np.uint8)
 	y = []
@@ -60,12 +98,7 @@ def get_training_data(df):
 		X[i,] = [ image.img_to_array(image.load_img(path+"/"+f+".jpg", target_size=(112, 112))) for f in files]
 		pbar.update(1)
 	pbar.close()
-
-	label_encoder = LabelEncoder()
-	integer_encoded = label_encoder.fit_transform(df[:,1])
-	onehot_encoder = OneHotEncoder(sparse=False)
-	integer_encoded = integer_encoded.reshape(len(integer_encoded), 1)
-	y = onehot_encoder.fit_transform(integer_encoded)
+	y = to_categorical(df[:,1],num_classes=num_classes)
 	return X,y
 
 
@@ -81,6 +114,7 @@ mask = (df['Frames']>=30) & ((df['Action']=='Swiping Left') | (df['Action']=='Sw
 							(df['Action']=='Thumb Up')      | (df['Action']=='No gesture') |
 							(df['Action']=='Rolling Hand Backward') | (df['Action']=='Zooming Out With Full Hand') )
 df = df[mask]
+
 label_encoder = LabelEncoder()
 integer_encoded = label_encoder.fit_transform(df['Action'])
 df['Action'] = integer_encoded
@@ -88,7 +122,7 @@ df['Action'] = integer_encoded
 dftrain = df.head(int(len(df)*0.8))
 dfval   = df.tail(int(len(df)*0.2))
 
-# model = seqlstm()
+# model = lstm()
 # model.summary()
 
 # model.fit_generator(
@@ -101,11 +135,19 @@ dfval   = df.tail(int(len(df)*0.2))
 # model = c3d_sports()
 model = c3d()
 model.summary()
+model.fit_generator(
+	DataGeneratorF(dftrain,dim=(112,112)),
+	validation_data=DataGeneratorF(dfval,dim=(112,112)),
+	verbose=1,
+	epochs=100,
+	use_multiprocessing=True,
+	workers=8
+)
 
-X,y = get_training_data(df)
-model.fit(X,
- 		  y,
- 		  verbose=1,
- 		  epochs=100,
- 		  validation_split=0.2)
+# X,y = get_training_data(df)
+# model.fit(X,
+#  		  y,
+#  		  verbose=1,
+#  		  epochs=100,
+#  		  validation_split=0.2)
 

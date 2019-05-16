@@ -135,6 +135,8 @@ def c3d():
 
     for i in range(0,14,1):
         model.layers[i].set_weights(pre_train.layers[i].get_weights())
+
+    for i in range(0,10,1):    
         model.layers[i].trainable = False
 
     model.compile(loss='categorical_crossentropy',
