@@ -1,6 +1,9 @@
 /__pycache__
 /pretrained_weights/*
-
+/checkpoint_models/*
+/frozen_models/*
+/audio_files/*
+*.DS_Store
 
 jester-data
 sftp-config.json
