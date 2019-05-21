@@ -15,7 +15,14 @@ mask = ((df['Action']=='Swiping Left') |
 		(df['Action']=='Thumb Up')     |
 		(df['Action']=='No gesture') |
 		(df['Action']=='Rolling Hand Backward') |
-		(df['Action']=='Zooming Out With Full Hand'))
+		(df['Action']=='Turning Hand Counterclockwise') |
+		(df['Action']=='Sliding Two Fingers Left') | 
+		(df['Action']=='Sliding Two Fingers Right') |
+		(df['Action']=='Stop Sign') |
+		(df['Action']=='Drumming Fingers'))
+
+
+
 df = df[mask]
 df['Frames'] = 0
 
@@ -28,4 +35,4 @@ for idx,row in df.iterrows():
 	pbar.update(1)
 pbar.close()
 
-df[mask].to_csv("jester-train-v2.csv",index=False,header=False,sep=';')
+df[mask].to_csv("jester-train-12.csv",index=False,header=False,sep=';')

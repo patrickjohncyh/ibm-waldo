@@ -6,6 +6,9 @@ import keras
 
 from keras.preprocessing import image
 from keras.utils import to_categorical
+from keras.callbacks import EarlyStopping, ModelCheckpoint
+from keras.models import load_model
+
 
 from sklearn.preprocessing import LabelEncoder,OneHotEncoder
 
@@ -47,7 +50,7 @@ class DataGenerator(keras.utils.Sequence):
 		self.df = self.df.sample(frac=1.0)
 
 
-class DataGeneratorF(keras.utils.Sequence):
+class DataGeneratorF(keras.utils.Sequence): #Data generator from image frames used in C3D + LSTM
 	def __init__(self, df,  batch_size=32, num_frames = 30, dim=(112,122), n_channels=3, shuffle=True): 
 	    # Initialization
 		self.transform = None
@@ -103,16 +106,18 @@ def get_training_data(df):
 
 
 
-df = pd.read_csv( 'jester-train.csv',
+df = pd.read_csv( 'jester-train-12.csv',
 					index_col = None,
 					header=None,
 					sep=';',
 					names=['Folder','Action','Frames'])
 
 
-mask = (df['Frames']>=30) & ((df['Action']=='Swiping Left') | (df['Action']=='Swiping Down') |
-							(df['Action']=='Thumb Up')      | (df['Action']=='No gesture') |
-							(df['Action']=='Rolling Hand Backward') | (df['Action']=='Zooming Out With Full Hand') )
+mask = (df['Frames']>=30) 
+
+# & ((df['Action']=='Swiping Left') | (df['Action']=='Swiping Down') |
+# 							(df['Action']=='Thumb Up')      | (df['Action']=='No gesture') |
+# 							(df['Action']=='Rolling Hand Backward') | (df['Action']=='Zooming Out With Full Hand') )
 df = df[mask]
 
 label_encoder = LabelEncoder()
@@ -133,15 +138,24 @@ dfval   = df.tail(int(len(df)*0.2))
 # )
 
 # model = c3d_sports()
-model = c3d()
+#model = c3d()
+model = load_model('checkpoint_models/C3DLSTM12.h5')
 model.summary()
 model.fit_generator(
 	DataGeneratorF(dftrain,dim=(112,112)),
 	validation_data=DataGeneratorF(dfval,dim=(112,112)),
 	verbose=1,
-	epochs=100,
+	epochs=5,
 	use_multiprocessing=True,
-	workers=8
+	workers=8,
+	max_queue_size = 25,
+	initial_epoch = 4,
+	callbacks=[ModelCheckpoint('checkpoint_models/C3DLSTM12_2.h5',
+                                monitor='val_loss',
+                                verbose=1,
+                                save_best_only=True,
+                                mode='min',
+                                period=1)]
 )
 
 # X,y = get_training_data(df)
