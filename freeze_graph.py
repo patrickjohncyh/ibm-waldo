@@ -1,8 +1,9 @@
 import tensorflow as tf
 import keras.backend as K
 from tensorflow.python.framework import graph_io
-from keras.models import load_model,Model
-from keras.layers import Input
+
+from tensorflow.keras.models import load_model,Model
+from tensorflow.keras.layers import Input
 
 
 import tensorflow.contrib.tensorrt as trt
@@ -14,7 +15,7 @@ tf.keras.backend.clear_session()
 
 
 save_pb_dir = 'frozen_models'
-model_fname = 'erkl.h5'
+model_fname = 'checkpoint_models/C3DLSTM12.h5'
 
 
 def freeze_graph(graph, session, output, save_pb_dir='.', save_pb_name='frozen_model.pb', save_pb_as_text=False):
@@ -30,7 +31,6 @@ def get_frozen_graph(graph_file):
         graph_def = tf.GraphDef()
         graph_def.ParseFromString(f.read())
     return graph_def        
-
 
 def freeze_session(session, keep_var_names=None, output_names=None, clear_devices=True):
     from tensorflow.python.framework.graph_util import convert_variables_to_constants
@@ -65,8 +65,26 @@ tf.global_variables_initializer()
 input_names = [t.op.name for t in model.inputs]
 output_names = [t.op.name for t in model.outputs]
 
+# # This line must be executed before loading Keras model.
+# tf.keras.backend.set_learning_phase(0) 
+
+# model = load_model(model_fname,custom_objects={'tf':tf,'K':K})
+# model.summary()
+# input_layer = Input((30,112,112,3))
+# output_layer = model(input_layer)
+# model = Model(input_layer,output_layer)
+# model.summary()
+
+session = tf.keras.backend.get_session()
+
+
+input_names = ['input_1']  #[t.op.name for t in model.inputs]
+output_names = [' sequential_2/dense_2/Softmax'] #[t.op.name for t in model.outputs]
+
+
 # Prints input and output nodes names, take notes of them.
 print(input_names, output_names)
+
 
 frozen_graph = freeze_graph(session.graph, session, [out.op.name for out in model.outputs], save_pb_dir=save_pb_dir)
 # frozen_graph = freeze_graph(session.graph, session, output_names, save_pb_dir=save_pb_dir)

@@ -158,7 +158,7 @@ def c3d():
                    #dropout=0.5))
     model.add(Dense(512, activation='relu'))
     model.add(Dropout(0.5))
-    model.add(Dense(6, activation='softmax'))
+    model.add(Dense(12, activation='softmax'))
 
     for i in range(0,14,1):
         model.layers[i].set_weights(pre_train.layers[i].get_weights())
@@ -169,6 +169,7 @@ def c3d():
     model.compile(loss='categorical_crossentropy',
                   optimizer=Adam(),
                   metrics=['accuracy'])
+
     return model
 
 def c2d():
@@ -387,6 +388,7 @@ def c3dlstmonly():
     model.compile(loss='categorical_crossentropy',
                   optimizer=Adam(),
                   metrics=['accuracy'])
+
     return model
 
 

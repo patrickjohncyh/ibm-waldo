@@ -106,16 +106,18 @@ def get_training_data(df):
 
 
 
-df = pd.read_csv( 'jester-train.csv',
+df = pd.read_csv( 'jester-train-12.csv',
 					index_col = None,
 					header=None,
 					sep=';',
 					names=['Folder','Action','Frames'])
 
 
-mask = (df['Frames']>=30) & ((df['Action']=='Swiping Left') | (df['Action']=='Swiping Down') |
-							(df['Action']=='Thumb Up')      | (df['Action']=='No gesture') |
-							(df['Action']=='Rolling Hand Backward') | (df['Action']=='Zooming Out With Full Hand') )
+mask = (df['Frames']>=30) 
+
+# & ((df['Action']=='Swiping Left') | (df['Action']=='Swiping Down') |
+# 							(df['Action']=='Thumb Up')      | (df['Action']=='No gesture') |
+# 							(df['Action']=='Rolling Hand Backward') | (df['Action']=='Zooming Out With Full Hand') )
 df = df[mask]
 
 label_encoder = LabelEncoder()
@@ -136,13 +138,19 @@ dfval   = df.tail(int(len(df)*0.2))
 # )
 
 # model = c3d_sports()
+
 model = c3d_super_lite()
 # model = load_model('checkpoint_models/c3d_super_lite_freeze_first2conv.h5')
+
+#model = c3d()
+# model = load_model('checkpoint_models/C3DLSTM12.h5')
+
 model.summary()
 model.fit_generator(
 	DataGeneratorF(dftrain,dim=(112,112)),
 	validation_data=DataGeneratorF(dfval,dim=(112,112)),
 	verbose=1,
+
 	epochs=20,
 	use_multiprocessing=True,
 	workers=10,
