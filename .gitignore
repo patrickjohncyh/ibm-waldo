@@ -6,6 +6,6 @@
 *.DS_Store
 
 jester-data
-sftp-config.json
+/sftp-config.json
 
 6522/
