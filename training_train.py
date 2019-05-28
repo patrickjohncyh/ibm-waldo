@@ -16,8 +16,8 @@ from tqdm import tqdm
 
 from Models import lstm,seqlstm,c3d_sports,c3d,c3d_super_lite
 
-class DataGenerator(keras.utils.Sequence):
-	def __init__(self, df,  batch_size=32, num_frames = 30, dim=1280, n_channels=1, shuffle=True): 
+class DataGeneratorF(keras.utils.Sequence): #Data generator from image frames used in C3D + LSTM
+	def __init__(self, df,  batch_size=32, num_frames = 30, dim=(112,122), n_channels=3, shuffle=True): 
 	    # Initialization
 		self.transform = None
 		self.dim = dim
@@ -51,31 +51,13 @@ class DataGenerator(keras.utils.Sequence):
 		# 'Updates indexes after each epoch'
 		self.df = self.df.sample(frac=1.0)
 
-#def get_training_data(df):
-#	num_classes = len(df['Action'].unique())
-#	df = df.head(6000)
-#	df = df.values
-#	X =  np.empty((6000,30,112,112,3),dtype=np.uint8)
-#	y = []
-#	pbar = tqdm(total=6000)
-#	for i in range(0,6000,1):
-#		v,label,num_frames= df[i]
-#		path = os.path.join('jester-data','20bn-jester-v1',str(v))
-#		files = np.sort(np.array([os.path.splitext(filename)[0] for filename in os.listdir(path)]))
-#		files = files[:30]
-#		X[i,] = [ image.img_to_array(image.load_img(path+"/"+f+".jpg", target_size=(112, 112))) for f in files]
-#		pbar.update(1)
-#	pbar.close()
-#	y = to_categorical(df[:,1],num_classes=num_classes)
-#	return X,y
-
 
 df = pd.read_csv( 'vids_csv.csv',
 					index_col = None,
 					header=None,
 					sep=',',
-
 					names=['Folder','Action', 'V1', 'V2' , 'V3' , 'V4' , 'V5'])
+
 
 label_encoder = LabelEncoder()
 integer_encoded = label_encoder.fit_transform(df['Action'])
@@ -101,7 +83,7 @@ model.fit_generator(
  	validation_data=DataGeneratorF(dfval,dim=(112,112)),
  	verbose=1,
  	epochs=50 ,
- 	callbacks=[ModelCheckpoint('checkpoint_models/C3DLSTM_makaton_clean_weightsonly.h5',
+ 	callbacks=[ModelCheckpoint('checkpoint_models/C3DLSTM_makaton_clean_weightsonly2.h5',
                                 monitor='val_loss',
                                 verbose=1,
                                 save_best_only=True,
@@ -109,4 +91,3 @@ model.fit_generator(
                                 mode='min',
                                 period=1)]
  )
-
