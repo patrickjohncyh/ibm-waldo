@@ -1,23 +1,150 @@
-Overview of Pi Function
-=======================
+WALDO
+======
 
-To relieve the computational load imposed on the Jetson, all functions other than running the machine learning model have been offloaded to a Raspberry Pi 3 Model B. This allows the Jetson to be used to identify Makaton signs with low latency and high inference rate. The functions the Pi performs are:
+Introduction
+------------
 
-* Send audio files to speaker to provide device’s speech output
-* Receive information from device buttons, output user-customised responses
-* Receive information from proximity sensor
-* Receive information from Jetson Nano regarding state of readiness and Makaton sign identified
+People with learning disabilities can encounter difficulty in expressing themselves in speech. Makaton is a language programme that uses signs and symbols to enable users of all ages to communicate effectively. WALDO is a machine learning-enabled assisted living device meant for use by Makaton users and their carers in a care home setting. WALDO’s capabilities include:
 
-Hence, the Pi runs the high level logic of the device, bringing together information from the sensors, buttons and Jetson, after which it determines the appropriate output and plays it on the connected speaker.
+* Makaton sign language interpretation using machine learning
+* Easy-to-use interface, and a cute and endearing package to encourage use by people with learning disabilities and their carers
+* Programmable buttons for users to quickly express pre-set phrases or emotions
 
-Proximity Sensor
----------------
+Intended Use
+------------
 
-The proximity sensor used is the Parallax PING Ultrasonic Sensor. The sensor works as follows: the I/O pin triggers an ultrasonic burst, after which it measures the time required for an echo to be received. In WALDO, the proximity sensor is used to give the user a gauge of an appropriate distance for the user to be at to use its different functions.
+WALDO is intended for use in a care home setting in the following ways:
 
-The diagram below shows the functions corresponding to the different ranges between WALDO and the user.
+Makaton sign interpretation
+1. Makaton user (care home patient) signs to WALDO
+2. WALDO uses machine learning to interpret sign
+3. WALDO vocalises sign for carer to understand what user intends to express
+4. Carer reacts accordingly, completing the interaction between the user and carer
+This implementation enables the carer to understand the user without having to undergo the time-consuming process of learning Makaton.
 
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/Test%20folder/sensor_ranges.png "Pi function at different ranges from ultrasonic sensor")
+Expression of pre-set phrases/emotions
+1. User (by him/herself, or via carer) sets common phrases that he/she uses frequently to correspond to physical buttons on WALDO
+2. User labels buttons accordingly for ease of use
+3. User presses the relevant button, WALDO vocalises pre-set phrase
+4. Carer responds accordingly
+This implementation enables people with learning disabilities that have difficulty expressing themselves in speech to easily express everyday sentiments.
 
-The device is disabled if the proximity sensor is blocked, since it detects a range of less than 5cm. Between 5 and 55cm, the user can use the buttons. Between 55 and 70cm, WALDO interprets the user’s intention to be to perform Makaton interpretation, and directs them to stand further away to ensure that the user’s sign can be properly captured by the camera. If the user is further than 70cm away, Makaton interpretation is carried out and the relevant output is transmitted to the speaker.
 
+Device Components
+-----------
+
+To achieve the aims outlined above, this group has implemented WALDO using the following components, as will be outlined in this Virtual Design History File.
+
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Subsection</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td colspan="2"><span style="font-weight:bold">Overview</span></td>
+    <td>Overview of WALDO, contents of Virtual Design History File</td>
+  </tr>
+  <tr>
+    <td rowspan="3"><span style="font-weight:bold">Setup</span></td>
+    <td>Pi Setup</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jetson Nano Setup</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Hardware Setup</td>
+    <td>Diagram of device hardware connections</td>
+  </tr>
+  <tr>
+    <td rowspan="5"><span style="font-weight:bold">Machine Learning</span></td>
+    <td>Code</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Model and Weights</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Model History and Evolution</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Input test videos?</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Server environment setup for further model training</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="4"><span style="font-weight:bold">Pi</span></td>
+    <td>Overview of Pi Function</td>
+    <td>Outline of functions and connections of Pi</td>
+  </tr>
+  <tr>
+    <td>main.py</td>
+    <td>Main function controlling operation of Pi</span></td>
+  </tr>
+  <tr>
+    <td>IBM_text_to_speech.py</td>
+    <td>Python script to obtain text to speech output from IBM Watson</span></td>
+  </tr>
+  <tr>
+    <td>Logic flow diagram</td>
+    <td>Logic for Pi function</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><span style="font-weight:bold">Hardware</span></td>
+    <td>3D printing files</td>
+    <td>Contains Standard Tessellation Language (STL) files of the Jetson Nano case, the Pi case, the button support structure and WALDO’s eyepiece</td>
+  </tr>
+  <tr>
+    <td>Power Supply</td>
+    <td>Summary of considerations when choosing WALDO’s power supply</td>
+  </tr>
+  <tr>
+    <td rowspan="4"><span style="font-weight:bold">Administrative</span></td>
+    <td>Record of Meetings</td>
+    <td>Meeting minutes and decisions made</td>
+  </tr>
+  <tr>
+    <td>Gantt Chart</td>
+    <td>Intended timeline of project (plotted during first meeting at IBM Hursley)</td>
+  </tr>
+  <tr>
+    <td>Bill of Materials</td>
+    <td>Record of expenditure and outline of cost of device</td>
+  </tr>
+  <tr>
+    <td>Data Collection</td>
+    <td>Outline of procedure, considerations and product of data collection</td>
+  </tr>
+  <tr>
+    <td rowspan="6"><span style="font-weight:bold">Miscellaneous</span></td>
+    <td>Ethical Considerations</td>
+    <td>Outline of ethical considerations in the design, building and use of WALDO</td>
+  </tr>
+  <tr>
+    <td>Sustainability considerations</td>
+    <td>Outline of sustainability considerations in the design, building and use of WALDO</td>
+  </tr>
+  <tr>
+    <td>Blog</td>
+    <td>Rationale behind the blog and links to the blog posts</td>
+  </tr>
+  <tr>
+    <td>Future Work</td>
+    <td>Discussion of present implementation and possible extensions to the project</td>
+  </tr>
+  <tr>
+    <td>Leaflet</td>
+    <td>Informational leaflet on WALDO</td>
+  </tr>
+  <tr>
+    <td>Poster</td>
+    <td>Poster for hackbooth and presentation</td>
+  </tr>
+</table>
