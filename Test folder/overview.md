@@ -85,12 +85,12 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Outline of functions and connections of Pi</td>
   </tr>
   <tr>
-    <td>switchtest.py</td>
-    <td><span style="font-weight:bold">(rename?)</span><span style="font-weight:normal"> Main function controlling operation of Pi</span></td>
+    <td>main.py</td>
+    <td>Main function controlling operation of Pi</span></td>
   </tr>
   <tr>
-    <td>sound_to_text.py</td>
-    <td><span style="font-weight:bold">(rename?)</span><span style="font-weight:normal"> Python script to obtain text to speech output from IBM Watson</span></td>
+    <td>IBM_text_to_speech.py</td>
+    <td>Python script to obtain text to speech output from IBM Watson</span></td>
   </tr>
   <tr>
     <td>Logic flow diagram</td>
