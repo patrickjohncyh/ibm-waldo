@@ -46,12 +46,12 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-pq3e">Section</th>
-    <th class="tg-pq3e">Subsection</th>
-    <th class="tg-pq3e">Description</th>
+    <th>Section</th>
+    <th>Subsection</th>
+    <th>Description</th>
   </tr>
   <tr>
-    <td class="tg-xldj" colspan="2"><span style="font-weight:bold">Overview</span></td>
+    <td class="tg-xldj" colspan="2"><span style="font-weight:bold">*Overview*</span></td>
     <td class="tg-xldj">Overview of WALDO, contents of Virtual Design History File</td>
   </tr>
   <tr>
