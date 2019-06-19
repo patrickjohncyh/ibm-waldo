@@ -36,7 +36,7 @@ The dataset has the following ethnic composition [1].
 
 This compares well with Imperial College’s ethnic composition [2], shown below.
 
-| Ethnicity                                          	| PG   	| UG   	| PG%  	| UG%  	|
+| Ethnicity                                          	| Postgraduate (PG)   	| Undergraduate (UG)   	| PG%  	| UG%  	|
 |----------------------------------------------------	|------	|------	|------	|------	|
 | White                                              	| 2310 	| 1177 	| 43.4 	| 40.1 	|
 | Black or Black British – African, Caribbean, Other 	| 168  	| 82   	| 3.2  	| 2.8  	|
