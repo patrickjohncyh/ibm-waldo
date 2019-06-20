@@ -62,7 +62,8 @@ A concern with any technological device meant to perform a role previously carri
 
   
 
-In conclusion, WALDO has been designed and built specifically with the abovementioned ethical considerations in mind, with specific measures to safeguard privacy and work within existing care home structures. In addition, these considerations should remain a priority when planning further extensions to WALDO.
+In conclusion, WALDO has been designed and built specifically with the above mentioned ethical considerations in mind, with specific measures to safeguard privacy and work within existing care home structures. In addition, these considerations should remain a priority when planning further extensions to WALDO.
+
 
 ## Bibliography
 
@@ -72,12 +73,12 @@ In conclusion, WALDO has been designed and built specifically with the abovement
 
   
 
-[2] Alton, L. Are Customers Finally Ready to Adopt Smart Home Technology? Huffington Post. [Online] 2017; Available from: https://www.huffpost.com/entry/are-customers-finally-ready-to-adopt-smart-home-technology_b_59e6e735e4b0e60c4aa3666f [Accessed: 18 June 2019].
+[2] Alton, L. Are Customers Finally Ready to Adopt Smart Home Technology? *Huffington Post*. [Online] 2017; Available from: https://www.huffpost.com/entry/are-customers-finally-ready-to-adopt-smart-home-technology_b_59e6e735e4b0e60c4aa3666f [Accessed: 18 June 2019].
 
   
 
-[3] Zheng, S., Apthorpe, N., Chetty, M. & Feamster, N. (2018) User Perceptions of Smart Home IoT Privacy. Proceedings of the ACM on Human-Computer Interaction - CSCW. [Online] 2 (CSCW). Available from: doi:10.1145/3274469 [Accessed: 18 June 2019].
+[3] Zheng, S., Apthorpe, N., Chetty, M. & Feamster, N. (2018) User Perceptions of Smart Home IoT Privacy. *Proceedings of the ACM on Human-Computer Interaction - CSCW*. [Online] 2 (CSCW). Available from: doi:10.1145/3274469 [Accessed: 18 June 2019].
 
   
 
-[4] Gennings, W. (n.d.) Privacy Notice. [Online]. Precious Homes. Available from: http://www.precious-homes.co.uk/privacy-policy/ [Accessed: 18 June 2019].
+[4] Gennings, W. (n.d.) *Privacy Notice*. [Online]. Precious Homes. Available from: http://www.precious-homes.co.uk/privacy-policy/ [Accessed: 18 June 2019].
