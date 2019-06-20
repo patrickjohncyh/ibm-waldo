@@ -5,7 +5,7 @@ As a device meant for use with vulnerable people and relying on a significant am
   
 ## User Privacy
 
-In recent years, with advancements in connectivity and sensor technology, smart home devices have become increasingly ubiquitous in developed countries [1][2]. However, data privacy is one key concern for smart home users; concerns include[3]:
+In recent years, with advancements in connectivity and sensor technology, smart home devices have become increasingly ubiquitous in developed countries[1][2]. However, data privacy is one key concern for smart home users; concerns include[3]:
 
   
 
