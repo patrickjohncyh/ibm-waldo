@@ -69,7 +69,7 @@ In conclusion, WALDO has been designed and built specifically with the above men
 
   
 
-[1] Snow, A. Americans Ready for the Smart Home. [Online] Coldwell Banker Blue Matter. Available from: https://www.coldwellbanker.com/blog/americans-ready-for-the-smart-home/?utm_source=pr&utm_medium=referral&utm_campaign=pr-blog-smarthomes&utm_content=CNET [Accessed: 18 June 2019].
+[1] Snow, A. *Americans Ready for the Smart Home*. [Online] Coldwell Banker Blue Matter. Available from: https://www.coldwellbanker.com/blog/americans-ready-for-the-smart-home/?utm_source=pr&utm_medium=referral&utm_campaign=pr-blog-smarthomes&utm_content=CNET [Accessed: 18 June 2019].
 
   
 
