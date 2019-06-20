@@ -6,7 +6,7 @@ Ensuring Pi is running an up to date OS version
 
 The OS of the Pi must be checked to ensure that it is compatible with the setup described. 
 
-In the current implementation, the Pi runs on Raspbian 1.2. Do make sure that the OS on your Pi is at least 1.2 or newer. This can be done via the following command on the Pi’s terminal: `cat /etc/os-release`. 
+In the current implementation, the Pi runs on Raspbian 1.2. Do make sure that the OS on your Pi is at least 1.2 or newer. This can be checked by entering the following command on the Pi’s terminal: `cat /etc/os-release`. 
 
 Installation of Packages
 ------------------------
