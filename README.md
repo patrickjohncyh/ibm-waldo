@@ -60,8 +60,12 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td rowspan="5"><span style="font-weight:bold">Machine Learning</span></td>
-    <td>Code</td>
-    <td>Jetson Nano implementation code and Server training code</td>
+    <td>Server Training Code</td>
+    <td>Code to be run on server for further model training beyond 5 makaton signs</td>
+  </tr>
+  <tr>
+    <td>Jetson Nano Execution Code</td>
+    <td>Code to be run on Jetson Nano for running sign recognition</td>
   </tr>
   <tr>
     <td>Model and Weights</td>
