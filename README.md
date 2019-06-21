@@ -115,7 +115,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Meeting minutes and decisions made</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/Ganttchart.jpg"> Gantt Chart</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/gantt_chart.md"> Gantt Chart</td>
     <td>Intended timeline of project (plotted during first meeting at IBM Hursley)</td>
   </tr>
   <tr>
