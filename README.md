@@ -60,7 +60,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td rowspan="5"><span style="font-weight:bold">Machine Learning</span></td>
-    <td>Server Training Code</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/server-training"> Server Training Code</a></td>
     <td>Code to be run on server for further model training beyond 5 makaton signs</td>
   </tr>
   <tr>
@@ -72,19 +72,15 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Saved weights of the final trained model</td>
   </tr>
   <tr>
-    <td>Model History and Evolution</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/ModelHistoryAndEvolution.md"> Model History and Evolution </a></td>
     <td>Model design history and evolution</td>
   </tr>
   <tr>
-    <td>Input test videos?</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Server environment setup for further model training</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/ServerEnvironmentSetup.md"> Server environment setup for further model training</a></td>
     <td>Setting up server environment to train model to recognise more than 5 Makaton signs</td>
   </tr>
   <tr>
-    <td rowspan="4"><span style="font-weight:bold">Pi</span></td>
+    <td rowspan="4"><span style="font-weight:bold">Raspberry Pi</span></td>
     <td>Overview of Pi Function</td>
     <td>Outline of functions and connections of Pi</td>
   </tr>
