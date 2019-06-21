@@ -93,8 +93,8 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Python script to obtain text to speech output from IBM Watson</span></td>
   </tr>
   <tr>
-    <td>Logic flow diagram</td>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi#overall-pi-function"> Logic for Pi function</a></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi#overall-pi-function">Logic flow diagram</a></td>
+    <td>Logic for Pi function</td>
   </tr>
   <tr>
     <td rowspan="3"><span style="font-weight:bold">Hardware</span></td>
