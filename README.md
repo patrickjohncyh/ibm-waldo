@@ -98,7 +98,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td rowspan="3"><span style="font-weight:bold">Hardware</span></td>
-    <td>3D printing files</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/4-Hardware/3D%20Printing%20STL%20Files">3D printing files</a></td>
     <td>Contains Standard Tessellation Language (STL) files of the Jetson Nano case, the Pi case, the button support structure and WALDO’s eyepiece</td>
   </tr>
   <tr>
