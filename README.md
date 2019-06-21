@@ -47,7 +47,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td rowspan="3"><span style="font-weight:bold">Setup</span></td>
-    <td>Pi Setup</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/pisetup.md">Pi Setup</a></td>
     <td>Setting up Raspberry Pi</td>
   </tr>
   <tr>
