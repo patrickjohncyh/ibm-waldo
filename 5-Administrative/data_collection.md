@@ -12,13 +12,15 @@ Initially, data collection was conducted internally, with three members of the g
 
 This initial dataset consisted of 2700 videos. However, it was quickly discovered that the low amount of diversity in this dataset would be severely insufficient to train a machine learning model robust enough to interpret signs from a range of signers. Furthermore, all three group members were of the same ethnicity (Asian -- Chinese). Hence, volunteers were required as signers for further data collection.
 
-
+<Br>
+ 
 Data Privacy
 -----------
 
 In order to keep the project ‘internal’ for now, the decision was taken to only film volunteers around the Imperial College London campus at South Kensington. As such, only staff and students of Imperial College were filmed as volunteers. Before filming any volunteer, the purpose of the project and the reasons for filming were explained. Filming would then take place only if he or she gave their consent to the video recordings on the basis that the recordings were only to be used for this project and would be deleted at the end of the project.
 
- 
+<Br>
+
 Method of Data Collection
 ------------------------
 
@@ -26,6 +28,7 @@ It soon became clear that in order to have an accurate and robust neural network
 
 Volunteers were randomly found and filmed around the Imperial College London campus at South Kensington. Each volunteer would be filmed 5 times, corresponding to the 5 actions. In order not to demand too much of the volunteer, each volunteer was only filmed from a single angle- from a straight direction and a middle height with the volunteer stood approximately 2 metres from the camera. This angle and distance was chosen as the approximate height at which WALDO would eventually be placed at. A total of 162 volunteers were filmed.
 
+<Br>
 
 Ethnic Distribution
 -------------------
@@ -39,9 +42,13 @@ The dataset has the following ethnic composition(1).
 | Black                      	| 7      	| 4.32       	|
 | White                      	| 70     	| 43.2       	|
 
+<Br>
+
 ![Enthicity and Gender Distributions](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/data_diversity4.png "Ethnicity and Gender Distributions")
 
 > (1) A more detailed ethnic breakdown is not feasible as volunteers were not asked for information on their ethnicity when data was collected.
+
+<Br>
 
 This compares well with Imperial College’s ethnic composition(2), shown below.
 
@@ -60,5 +67,6 @@ This compares well with Imperial College’s ethnic composition(2), shown below.
 | Not known                                          	| 16   	| 201  	| 0.3  	| 6.8  	|
 | Information refused                                	| 119  	| 74   	| 2.2  	| 2.5  	|
 
+<Br>
 
 > (2) Acquired from a freedom of information request, accessible online at [https://www.whatdotheyknow.com/request/statistics_on_ethnicity](https://www.whatdotheyknow.com/request/statistics_on_ethnicity)
