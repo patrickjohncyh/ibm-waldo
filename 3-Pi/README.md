@@ -68,4 +68,6 @@ Overall Pi Function
 
 The logic flow diagram below describes the overall normal function of the Pi in WALDO.
 
+<Br>
+
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/pi%20logic.jpg "Pi logic flow diagram")
