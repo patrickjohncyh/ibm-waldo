@@ -30,7 +30,7 @@ Volunteers were randomly found and filmed around the Imperial College London cam
 Ethnic Distribution
 -------------------
 
-The dataset has the following ethnic composition [1].
+The dataset has the following ethnic composition[1].
 
 | Ethnicity                  	| Number 	| Percentage 	|
 |----------------------------	|--------	|------------	|
