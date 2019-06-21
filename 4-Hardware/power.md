@@ -13,7 +13,7 @@ A strong and stable power supply is needed to power WALDO. In order to choose an
 As such, the power source has to be able to supply about 20W of power to ensure stable and smooth operation. The biggest source of power consumption comes from the Jetson Nano. The most efficient way to power the Jetson Nano would be through the DC barrel jack connector (please refer to the hardware connections diagram which can be found under 'Setup'). However, in order to do so, a jumper pin needs to be placed on J48 on the Jetson board, as seen in the diagram below. This enables the Jetson to be powered through the barrel jack.
 
 
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/4.%20Hardware/Jetson%20board%20diagram.png)
+![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Jetson%20board%20diagram.png)
 
 
 One way to power the Jetson would be to use a 4A, 5V plug-in power adapter from the mains. However, this means that WALDO would no longer be portable hence making this option not ideal.
