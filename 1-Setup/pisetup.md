@@ -1,6 +1,17 @@
 Raspberry Pi setup
 ==================
+Setting up a Raspberry Pi and OS :
 
+1. A micro SD card is required to store the Raspbian OS, and a power source of 2.5 Watts is required to boot up the Raspberry Pi. 
+2. Most Sellers would have prepared an SD card with the Pi that is set up with the Raspbian OS. If the sellers have provided with an SD card with the OS, it can be simply booted up by connecting the Pi to a power source, and connecting it to an HDMI of a TV or a monitor screen. (If there is no SD card provided, look to step 3, otherwise refer to step 4)
+3. The first step to downloading the OS would be to head to the Raspberry Pi Downloads page from this link:  https://www.raspberrypi.org/downloads/  This link contains the files to download the NOOBS files which would be flashed into the SD card. The guide to formatting and copying of files over to the SD card can be found here :  https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
+4. After the files have been extracted and copied into the Pi, the last step would be to connect the Pi up. 
+5. Insert the SD card into the underside of the Pi. Connect the mouse and keyboard to the USB ports on the Pi. Lastly connect the HDMI cable to the Pi into a monitor or a TV screen for the video output. 
+6. Ethernet cable can be connected to the Pi if you wish to use the ethernet cable for internet connection. This might not be necessary as Raspberry Pi 3 would be able to connect wirelessly to the web.
+7. Lastly, connect the power cable into the Pi, and with all prior steps done, the video output would display a boot up screen and the raspberry Pi would be fully loaded on.  
+8. The final step to the set up would be to adjust the time and date setting as well as a language option for the Pi, and with all these done, the Pi is set up and ready to go. 
+
+ 
 Ensuring Pi is running an up to date OS version
 ------------------------------------------------
 
