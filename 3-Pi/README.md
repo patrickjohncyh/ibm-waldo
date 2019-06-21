@@ -21,6 +21,8 @@ The diagram below shows the functions corresponding to the different ranges betw
 
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/sensor_ranges.png "Sensor Ranges")
 
+<Br>
+  
 The device is disabled if the proximity sensor is blocked, since it detects a range of less than 5cm. Between 5 and 55cm, the user can use the buttons. Between 55 and 70cm, WALDO interprets the user’s intention to be to perform Makaton interpretation, and directs them to stand further away to ensure that the user’s sign can be properly captured by the camera. If the user is further than 70cm away, Makaton interpretation is carried out and the relevant output is transmitted to the speaker.
 
 <Br>
@@ -29,6 +31,8 @@ Function of Buttons
 -------------------
 
 WALDO has 4 hardware buttons. When one is pressed, the Pi detects the button press and plays the correct audio file using the connected speaker. This process is described by the flow diagram below.
+
+<Br>
 
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/audio_flow.png "Logic flow diagram for audio output from Pi")
 
@@ -49,7 +53,11 @@ Makaton interpretation using machine learning has been implemented on the Jetson
 
 When the Jetson has successfully booted up, a bit sequence of ‘111’ is transmitted to the Pi, producing an audio output of “I’m Ready”, letting the user know that the system is ready for use.
 
+ <Br>
+
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/jetson_to_pi.png "Pin connection between Jetson and Pi")
+
+<Br>
 
 If the number of signs that can be interpreted increases, more GPIO pins can be used for communication.
 
