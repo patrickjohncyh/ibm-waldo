@@ -39,7 +39,7 @@ The dataset has the following ethnic composition [1].
 | Black                      	| 7      	| 4.32       	|
 | White                      	| 70     	| 43.2       	|
 
-![Enthicity and Gender Distributions](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/data_diversity4.png "Enthicity and Gender Distributions")
+![Enthicity and Gender Distributions](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/data_diversity4.png "Ethnicity and Gender Distributions")
 
 This compares well with Imperial College’s ethnic composition [2], shown below.
 
