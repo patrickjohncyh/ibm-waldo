@@ -17,6 +17,8 @@ The table below shows the capabilities of WALDO that have and have not been impl
 | 4.  	| Ambient sensors to analyse and understand the user’s surroundings 	| **Not Implemented**                                                                                                                     	|
 | 5.  	| Replicability of product                                          	| **Not Implemented** - Components are for prototyping use; low replicability of product                                                  	|
 
+<Br>
+
 ## Improvements to Present Hardware
 
   
