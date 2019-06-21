@@ -102,53 +102,53 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Contains Standard Tessellation Language (STL) files of the Jetson Nano case, the Pi case, the button support structure and WALDO’s eyepiece</td>
   </tr>
   <tr>
-    <td>Power Supply</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Power_Source.md"> Power Supply</td>
     <td>Summary of considerations when choosing WALDO’s power supply</td>
   </tr>
   <tr>
-    <td>Hardware List</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Hardware_List.md"> Hardware List</td>
     <td>List of all hardware components used in assembly of WALDO</td>
   </tr>
   <tr>
     <td rowspan="4"><span style="font-weight:bold">Administrative</span></td>
-    <td>Record of Meetings</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/5-Administrative/Record%20of%20Meetings"> Record of Meetings</td>
     <td>Meeting minutes and decisions made</td>
   </tr>
   <tr>
-    <td>Gantt Chart</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/Ganttchart.jpg"> Gantt Chart</td>
     <td>Intended timeline of project (plotted during first meeting at IBM Hursley)</td>
   </tr>
   <tr>
-    <td>Bill of Materials</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/Bill_of_Materials.md"> Bill of Materials</td>
     <td>Record of expenditure and outline of cost of device</td>
   </tr>
   <tr>
-    <td>Data Collection</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/data_collection.md"> Data Collection</td>
     <td>Outline of procedure, considerations and product of data collection</td>
   </tr>
   <tr>
     <td rowspan="6"><span style="font-weight:bold">Miscellaneous</span></td>
-    <td>Ethical Considerations</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Ethical%20Considerations.md"> Ethical Considerations</td>
     <td>Outline of ethical considerations in the design, building and use of WALDO</td>
   </tr>
   <tr>
-    <td>Sustainability considerations</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Sustainability%20Considerations.md"> Sustainability considerations</td>
     <td>Outline of sustainability considerations in the design, building and use of WALDO</td>
   </tr>
   <tr>
-    <td>Blog</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/blog.md"> Blog</td>
     <td>Rationale behind the blog and links to the blog posts</td>
   </tr>
   <tr>
-    <td>Future Work</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Future%20Work.md"> Future Work</td>
     <td>Discussion of present implementation and possible extensions to the project</td>
   </tr>
   <tr>
-    <td>Leaflet</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Leaflet.pdf">Leaflet</td>
     <td>Informational leaflet on WALDO</td>
   </tr>
   <tr>
-    <td>Poster</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Poster.pdf">Poster</td>
     <td>Poster for hackbooth and presentation</td>
   </tr>
 </table>
