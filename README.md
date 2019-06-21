@@ -86,11 +86,11 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td>main.py</td>
-    <td>Main function controlling operation of Pi</span></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi/main.py"> Main function controlling operation of Pi</span></td>
   </tr>
   <tr>
     <td>IBM_text_to_speech.py</td>
-    <td>Python script to obtain text to speech output from IBM Watson</span></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi/IBM_text_to_speech.py"> Python script to obtain text to speech output from IBM Watson</span></td>
   </tr>
   <tr>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi#overall-pi-function">Logic flow diagram</a></td>
