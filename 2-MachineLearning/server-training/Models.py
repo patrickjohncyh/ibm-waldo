@@ -52,7 +52,7 @@ def c3d_super_lite():
                    dropout=0.5))
     model.add(keras.layers.Dense(512, activation='relu'))
     model.add(keras.layers.Dropout(0.5))
-    model.add(keras.layers.Dense(27, activation='softmax'))
+    model.add(keras.layers.Dense(6, activation='softmax'))
 
     model.compile(loss='categorical_crossentropy',
                   optimizer='adam',
@@ -97,7 +97,7 @@ def c3d():
                    dropout=0.5))
     model.add(Dense(512, activation='relu'))
     model.add(Dropout(0.5))
-    model.add(Dense(27, activation='softmax'))
+    model.add(Dense(6, activation='softmax'))
 
     
     model.compile(loss='categorical_crossentropy',
@@ -117,7 +117,7 @@ def lstm():
                    input_shape= (30,1280)))
     model.add(Dense(512, activation='relu'))
     model.add(Dropout(0.5))
-    model.add(Dense(26, activation='softmax'))
+    model.add(Dense(6, activation='softmax'))
 
     model.compile(loss='categorical_crossentropy',
                   optimizer=Adam(),

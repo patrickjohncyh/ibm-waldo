@@ -13,7 +13,7 @@ from utils.Generator import DataGeneratorIA
 from Models import c3d_super_lite
 
 # Load Training Labels
-df_jest = pd.read_csv( 'jester-train-all.csv',
+df_jest = pd.read_csv( 'jester-train-six-actions.csv',
 					index_col = None,
 					header=None,
 					sep=';',
@@ -50,7 +50,7 @@ model.fit_generator(
  	DataGeneratorIA(dftrain,dim=(112,112),augment=True),
  	validation_data=DataGeneratorIA(dfval,dim=(112,112),augment=True),
  	verbose=1,
- 	epochs=1000,
+ 	epochs=50,
  	callbacks=[ModelCheckpoint('checkpoint_models/C3D_L2Norm_LSTM_jester_6_actions.h5',
                                 monitor='val_loss',
                                 verbose=1,

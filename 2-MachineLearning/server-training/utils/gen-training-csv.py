@@ -17,7 +17,7 @@ df.columns = ['Folder','Action']
 # Mask to select desired Actions
 mask = ((df['Action']=='Swiping Left') 				| 
 	    (df['Action']=='Swiping Down') 				|
-		(df['Action']=='Thumbs Up') 				|
+		(df['Action']=='Thumb Up') 				|
 		(df['Action']=='Drumming Fingers')			|
 		(df['Action']=='Sliding Two Fingers Left') 	| 
 		(df['Action']=='No gesture'))
