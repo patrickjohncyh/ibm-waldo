@@ -2,6 +2,8 @@
 
 The following table shows the various components bought and used in the assembly of WALDO:
 
+<Br>
+
 | Item                                 	| Product Description                                                                                                                                                                  	| Manufacturer    	| Quantity 	| 
 |--------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------	|----------	|
 | Elephant Stuffed Toy                 	| Fuddlewuddle Elephant, Medium- H23 cm                                                                                                                                                	| Jellycat        	| 1        	| 
@@ -23,4 +25,6 @@ The following table shows the various components bought and used in the assembly
 
 > Note that some of the supplementary and commonly found hardware such as jumper cables, wires and the 3D Prints were not included in this list.
 
-> Also note that this list does not show the cost of each item. The Bill of Materials (which shows the cost of each item) can be found by navigating to "5-Adminisitrative> Bill_of_Materials.md"
+<Br>
+  
+> Also note that this list does not show the cost of each item. The Bill of Materials (which shows the cost of each item) can be found by navigating to "5-Adminisitrative> Bill_of_Materials.md".
