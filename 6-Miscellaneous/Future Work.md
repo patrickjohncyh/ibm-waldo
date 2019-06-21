@@ -40,7 +40,7 @@ Using purpose-built electronic components in WALDO, with higher GPU RAM and more
 
   
 
-The external physical components of WALDO could also stand to be improved. Improvements include sewing the electronic hardware onto the cotton of the device to improve robustness against rough handling, including a zip to allow easy access to WALDO’s interior devices, sewing holes into WALDO’s exterior to allow for convenient access to ports, and adding a physical on-off switch or a shutter for the camera for privacy.
+The external physical components of WALDO could also stand to be improved. Improvements include sewing the electronic hardware onto the cotton of the device to improve robustness against rough handling, including a zip to allow easy access to WALDO’s interior devices, sewing holes into WALDO’s exterior to allow for convenient access to ports, and adding a physical on-off switch or a camera shutter for privacy.
 
 <Br>  
 
@@ -48,7 +48,7 @@ The external physical components of WALDO could also stand to be improved. Impro
 
   
 
-The most obvious area in which WALDO could stand to be improved is in increasing the number of signs it can recognise. However, this is a time-consuming process due to the lack of an online Makaton database with which to train the machine learning model. As such, the following changes could be made to the data collection process if the number of signs to be recognised is to be drastically increased.
+The first, and most apparent, area in which WALDO could stand to be improved is in increasing the number of signs it can recognise. However, this is a time-consuming process due to the lack of an online Makaton database with which to train the machine learning model. As such, the following changes could be made to the data collection process if the number of signs to be recognised is to be drastically increased.
 
   
 
