@@ -31,7 +31,10 @@ While WALDO is not strictly a smart home device, it possesses many characteristi
 
   
 
-As such, the privacy concerns that face smart home technologies would face WALDO too, and have to be addressed. Arguably, these concerns are all the more pressing, since WALDO is meant for use with people with learning disabilities, who are more vulnerable than everyday consumers. For example, they might be less aware of the reality of privacy breaches and hacking, and more willing to use a device that is not safe for use. While it may be argued that the onus is on the care home to ensure their residents’ privacy, and care homes such as Precious Homes have their own privacy policy[4], this group believes that WALDO should be built with its users’ privacy as one of its foremost considerations. For context, Precious Homes is the care home that the group worked with during this project, and provided recommendations on the use of Makaton.
+As such, the privacy concerns that face smart home technologies would face WALDO too, and have to be addressed. Arguably, these concerns are all the more pressing, since WALDO is meant for use with people with learning disabilities, who are more vulnerable than everyday consumers. For example, they might be less aware of the reality of privacy breaches and hacking, and more willing to use a device that is not safe for use. While it may be argued that the onus is on the care home to ensure their residents’ privacy, and care homes such as Precious Homes(1) have their own privacy policy[4], this group believes that WALDO should be built with its users’ privacy as one of its foremost considerations.
+
+> (1) Precious Homes is the care home that this group worked with during this project, and provided recommendations on the use of Makaton
+
 
   
 The first way in which WALDO addresses privacy concerns is in being an on-edge device, with the on-device Nvidia Jetson Nano having sufficient computational power to perform machine learning computation on its own. This obviates the need to send user data, that is, the video used for Makaton interpretation, to a remote server, where it could be compromised or misused.
