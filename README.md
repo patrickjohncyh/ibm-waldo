@@ -47,108 +47,108 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td rowspan="3"><span style="font-weight:bold">Setup</span></td>
+    <td> <a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/JetsonSetup.md"> Jetson Nano Setup</a></td>
+    <td>Setting up Jetson Nano</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/pisetup.md">Pi Setup</a></td>
     <td>Setting up Raspberry Pi</td>
   </tr>
   <tr>
-    <td>Jetson Nano Setup</td>
-    <td>Setting up Jetson Nano</td>
-  </tr>
-  <tr>
-    <td>Hardware Setup</td>
+    <td><a href = "https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/HardwareConnections.md"> Hardware Setup</a></td>
     <td>Diagram of device hardware connections</td>
   </tr>
   <tr>
     <td rowspan="5"><span style="font-weight:bold">Machine Learning</span></td>
-    <td>Code</td>
-    <td>Jetson Nano implementation code and Server training code</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/server-training"> Server Training Code</a></td>
+    <td>Code to be run on server for further model training beyond 5 makaton signs</td>
+  </tr>
+  <tr>
+    <td>Jetson Nano Execution Code</td>
+    <td>Code to be run on Jetson Nano for running sign recognition</td>
   </tr>
   <tr>
     <td>Model and Weights</td>
     <td>Saved weights of the final trained model</td>
   </tr>
   <tr>
-    <td>Model History and Evolution</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/ModelHistoryAndEvolution.md"> Model History and Evolution </a></td>
     <td>Model design history and evolution</td>
   </tr>
   <tr>
-    <td>Input test videos?</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Server environment setup for further model training</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/ServerEnvironmentSetup.md"> Server environment setup for further model training</a></td>
     <td>Setting up server environment to train model to recognise more than 5 Makaton signs</td>
   </tr>
   <tr>
-    <td rowspan="4"><span style="font-weight:bold">Pi</span></td>
-    <td>Overview of Pi Function</td>
+    <td rowspan="4"><span style="font-weight:bold">Raspberry Pi</span></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi"> Overview of Pi Function</a></td>
     <td>Outline of functions and connections of Pi</td>
   </tr>
   <tr>
-    <td>main.py</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi/main.py"> main.py</td>
     <td>Main function controlling operation of Pi</span></td>
   </tr>
   <tr>
-    <td>IBM_text_to_speech.py</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi/IBM_text_to_speech.py"> IBM_text_to_speech.py</td>
     <td>Python script to obtain text to speech output from IBM Watson</span></td>
   </tr>
   <tr>
-    <td>Logic flow diagram</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi#overall-pi-function">Logic flow diagram</a></td>
     <td>Logic for Pi function</td>
   </tr>
   <tr>
     <td rowspan="3"><span style="font-weight:bold">Hardware</span></td>
-    <td>3D printing files</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/4-Hardware/3D%20Printing%20STL%20Files">3D printing files</a></td>
     <td>Contains Standard Tessellation Language (STL) files of the Jetson Nano case, the Pi case, the button support structure and WALDO’s eyepiece</td>
   </tr>
   <tr>
-    <td>Power Supply</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Power_Source.md"> Power Supply</td>
     <td>Summary of considerations when choosing WALDO’s power supply</td>
   </tr>
   <tr>
-    <td>Hardware List</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Hardware_List.md"> Hardware List</td>
     <td>List of all hardware components used in assembly of WALDO</td>
   </tr>
   <tr>
     <td rowspan="4"><span style="font-weight:bold">Administrative</span></td>
-    <td>Record of Meetings</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/5-Administrative/Record%20of%20Meetings"> Record of Meetings</td>
     <td>Meeting minutes and decisions made</td>
   </tr>
   <tr>
-    <td>Gantt Chart</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/gantt_chart.md"> Gantt Chart</td>
     <td>Intended timeline of project (plotted during first meeting at IBM Hursley)</td>
   </tr>
   <tr>
-    <td>Bill of Materials</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/Bill_of_Materials.md"> Bill of Materials</td>
     <td>Record of expenditure and outline of cost of device</td>
   </tr>
   <tr>
-    <td>Data Collection</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/data_collection.md"> Data Collection</td>
     <td>Outline of procedure, considerations and product of data collection</td>
   </tr>
   <tr>
     <td rowspan="6"><span style="font-weight:bold">Miscellaneous</span></td>
-    <td>Ethical Considerations</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Ethical%20Considerations.md"> Ethical Considerations</td>
     <td>Outline of ethical considerations in the design, building and use of WALDO</td>
   </tr>
   <tr>
-    <td>Sustainability considerations</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Sustainability%20Considerations.md"> Sustainability considerations</td>
     <td>Outline of sustainability considerations in the design, building and use of WALDO</td>
   </tr>
   <tr>
-    <td>Blog</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/blog.md"> Blog</td>
     <td>Rationale behind the blog and links to the blog posts</td>
   </tr>
   <tr>
-    <td>Future Work</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Future%20Work.md"> Future Work</td>
     <td>Discussion of present implementation and possible extensions to the project</td>
   </tr>
   <tr>
-    <td>Leaflet</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Leaflet.pdf">Leaflet</td>
     <td>Informational leaflet on WALDO</td>
   </tr>
   <tr>
-    <td>Poster</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Poster.pdf">Poster</td>
     <td>Poster for hackbooth and presentation</td>
   </tr>
 </table>

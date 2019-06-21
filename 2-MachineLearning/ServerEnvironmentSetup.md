@@ -1,4 +1,5 @@
 
+
 Server environment setup for further model training
 ===
 
@@ -19,7 +20,7 @@ The steps from the link above may be summarised as follows:
 3. Download and Install a version of cuDNN that is compatible with the CUDA version you installed. (We used CUDNN 7.5.0 and you may enter `CUDNN_H_PATH=$(whereis cudnn.h)` followed by `cat ${CUDNN_H_PATH} | grep CUDNN_MAJOR -A 2` to check your cuDNN version if you already have cuDNN installed.
 <br>
 
-Installing Nvidia Driver, CUDA and cuDNN
+Installing Python packages
 ---
 We used Python v3.5.2 but we recommend v3.6.8 or the latest version for compatibility with performing inference on Jetson Nano.
 
@@ -62,5 +63,23 @@ tensorflow==1.13.1
 tensorflow-gpu==1.13.1
 
 tqdm==4.31.1
+<br>
+
+Download 20BN-Jester Dataset
+---
+You may obtain and download the Jester Dataset from [here](https://20bn.com/datasets/jester)
+<br>
+
+Generate training CSV
+---
+To generate the CSV used for training, run `python3 utils/gen-training-csv.py`.
+You may also select the actions for the model to train on by editing the mask in the python file.
+<br>
+
+Start training
+---
+To begin training the model, run `python3 training.py`
+
+
 
 
