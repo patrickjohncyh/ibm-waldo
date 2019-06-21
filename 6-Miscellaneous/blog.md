@@ -3,6 +3,7 @@
 At the start of the project, the group decided to create a blog site as a form of documentation with the main purpose of keeping our clients at IBM updated with the group’s progress. These blog posts were written on a weekly basis and outlined the tasks completed in the past week, including the challenges faced and how the group overcame them, as well as targets and aims for the next week. A total of 5 blog posts were written over the course of the project.
 
   
+  
 
 The blog site can be accessed through this link: [https://waldogroup13.wixsite.com/waldo](https://waldogroup13.wixsite.com/waldo)
 
