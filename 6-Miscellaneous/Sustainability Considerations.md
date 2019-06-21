@@ -25,7 +25,7 @@ In spite of this, this group believes that sustainability should still be a cons
 -   Providing disposal information with the WALDO device, to ensure that WALDO is disposed of in a responsible manner, and relevant components are recycled
     
 
-  
+<Br>  
 
 ## Economic Sustainability
 
@@ -40,6 +40,8 @@ In addition, a study done by the Personal Social Service Research Unit (PSSRU) a
   
 
 With WALDO possibly being a one time fixed cost(<£400) with low maintenance fees, employing the use of WALDO in care homes will certainly provide care homes with cost savings of about £1,000 per client per year. The cost savings can also be transferred to patients, thus reducing the cost of care for residents with additional needs. Cost savings can also be realised for patients not residing in care homes but in their own residential homes. As such, WALDO could certainly bring economic benefits to all stakeholders involved and is an economically sustainable solution.
+
+<Br>
 
 ## Bibliography
 
