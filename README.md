@@ -97,13 +97,17 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Logic for Pi function</td>
   </tr>
   <tr>
-    <td rowspan="2"><span style="font-weight:bold">Hardware</span></td>
+    <td rowspan="3"><span style="font-weight:bold">Hardware</span></td>
     <td>3D printing files</td>
     <td>Contains Standard Tessellation Language (STL) files of the Jetson Nano case, the Pi case, the button support structure and WALDO’s eyepiece</td>
   </tr>
   <tr>
     <td>Power Supply</td>
     <td>Summary of considerations when choosing WALDO’s power supply</td>
+  </tr>
+  <tr>
+    <td>Hardware List</td>
+    <td>List of all hardware components used in assembly of WALDO</td>
   </tr>
   <tr>
     <td rowspan="4"><span style="font-weight:bold">Administrative</span></td>
