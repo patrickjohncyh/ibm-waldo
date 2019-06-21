@@ -10,6 +10,8 @@ To relieve the computational load imposed on the Jetson, all functions other tha
 
 Hence, the Pi runs the high level logic of the device, bringing together information from the sensors, buttons and Jetson, after which it determines the appropriate output and plays it on the connected speaker.
 
+<Br>
+  
 Proximity Sensor
 ---------------
 
@@ -21,6 +23,8 @@ The diagram below shows the functions corresponding to the different ranges betw
 
 The device is disabled if the proximity sensor is blocked, since it detects a range of less than 5cm. Between 5 and 55cm, the user can use the buttons. Between 55 and 70cm, WALDO interprets the user’s intention to be to perform Makaton interpretation, and directs them to stand further away to ensure that the user’s sign can be properly captured by the camera. If the user is further than 70cm away, Makaton interpretation is carried out and the relevant output is transmitted to the speaker.
 
+<Br>
+  
 Function of Buttons
 -------------------
 
@@ -30,6 +34,8 @@ WALDO has 4 hardware buttons. When one is pressed, the Pi detects the button pre
 
 The IBM_text_to_speech.py code employs IBM Watson text-to-speech on Python to generate the audio files. The contents of the audio files can be edited to tailor the needs of the users by simply modifying or adding to the “predefined_actions” list in the code. The generated audio files are saved in a pre-determined folder on the Pi. In main.py, when a button is pressed, the relevant audio file is accessed and played via the speaker.
 
+<Br>
+  
 Communication with Jetson
 -------------------------
 
@@ -46,6 +52,8 @@ When the Jetson has successfully booted up, a bit sequence of ‘111’ is trans
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/jetson_to_pi.png "Pin connection between Jetson and Pi")
 
 If the number of signs that can be interpreted increases, more GPIO pins can be used for communication.
+
+<Br>
 
 Overall Pi Function
 -------------------
