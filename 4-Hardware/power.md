@@ -16,7 +16,6 @@ As such, the power source has to be able to supply about 20W of power to ensure 
   
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/Jetson%20board%20diagram.png "Jetson Board Layout")
 
-
 <Br>
 
 One way to power the Jetson would be to use a 4A, 5V plug-in power adapter from the mains. However, this means that WALDO would no longer be portable hence making this option not ideal.
