@@ -12,7 +12,7 @@ Note : Versions listed on that site may be outdated, but you can check their com
 
 The steps from the link above may be summarised as follows:
 
-1. Install Nvidia Driver on your machine via `sudo apt-get install nvidia-410 nvidia-modprobe` (We used V410.48, you can enter `nvidia-smi` on terminal to check your existing Nvidia Driver version if you already have one.
+1. Install Nvidia Driver on your machine via `sudo apt-get install nvidia-410 nvidia-modprobe` (We used V410.48, you can enter `nvidia-smi` on terminal to check your existing Nvidia Driver version if you already have one).
 
 2. Download and Install a version of CUDA that is compatible with your Nvidia driver (We used CUDA V10.0 and enter `nvcc --version` to check if you already have CUDA).
 
