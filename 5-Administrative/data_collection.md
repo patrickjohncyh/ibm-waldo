@@ -41,6 +41,8 @@ The dataset has the following ethnic composition [1].
 
 ![Enthicity and Gender Distributions](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/data_diversity4.png "Ethnicity and Gender Distributions")
 
+> [1] A more detailed ethnic breakdown is not feasible as volunteers were not asked for information on their ethnicity when data was collected.
+
 This compares well with Imperial College’s ethnic composition [2], shown below.
 
 | Ethnicity                                          	| Postgraduate (PG)   	| Undergraduate (UG)   	| PG%  	| UG%  	|
@@ -59,7 +61,4 @@ This compares well with Imperial College’s ethnic composition [2], shown below
 | Information refused                                	| 119  	| 74   	| 2.2  	| 2.5  	|
 
 
-[1] A more detailed ethnic breakdown is not feasible as volunteers were not asked for information on their ethnicity when data was collected.
-
-
-[2] Acquired from a freedom of information request, accessible online at [https://www.whatdotheyknow.com/request/statistics_on_ethnicity](https://www.whatdotheyknow.com/request/statistics_on_ethnicity)
+> [2] Acquired from a freedom of information request, accessible online at [https://www.whatdotheyknow.com/request/statistics_on_ethnicity](https://www.whatdotheyknow.com/request/statistics_on_ethnicity)
