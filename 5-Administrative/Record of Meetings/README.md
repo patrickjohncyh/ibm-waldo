@@ -14,4 +14,6 @@ Minutes for meetings with IBM and academic supervisors were taken and are includ
 
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/minutes_cal.JPG "Calendar of meeting minutes")
 
+<Br>
+  
 Meetings where minutes were taken are recorded in blue, deadlines for deliverables are recorded in green.
