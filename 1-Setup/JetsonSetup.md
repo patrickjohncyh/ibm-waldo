@@ -35,10 +35,10 @@ Power Mode Selection
 If facing power issues when running on a battery pack. The operating mode of the Jetson Nano can be altered to use less power.
 
 1. To check the current operating model (default is Mode 0 NMAX)
-`$ /usr/sbin/nvpmodel -q`
+```$ /usr/sbin/nvpmodel -q```
 
 2. To set the model to Mode 1 5W,
-`$ /usr/sbin/nvpmodel -m 1`
+```$ /usr/sbin/nvpmodel -m 1```
 3. To make Mode 1 default,
 	1. `$ sudo nano /etc/nvpmodel/nvpmodel_t210_jetson-nano.conf`
 	2. At the bottom of the file, change ‘PM_CONFIG DEAFULT=N’, where N is the desired Mode (i.e 0 or 1)
@@ -50,25 +50,34 @@ Adapted from https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-p
 
 6. Update and upgrade apt-get:
 
-`sudo apt-get update`
-
-`sudo apt-get upgrade`
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
 
 7. Install system packages as required by TensorFlow:
 
-`$ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev`
+```
+$ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev
+```
 
 8. Install pip3
 
-`$ sudo apt-get install python3-pip`
+```
+$ sudo apt-get install python3-pip
+```
 
 9. Install required python3 packaged for Tensorflow
 
-`$ sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta`
+```
+$ sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta
+```
 
 10. Install the NVIDIA release of tensorflow-gpu for Jetson Nano
 
-`$ sudo pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==$1.13.1+nv NEED CHECK`
+```
+$ sudo pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==$1.13.1+nv NEED CHECK
+```
 
 11. Verify that tensorflow-gpu is installed by importing into python3
 
@@ -85,7 +94,10 @@ It is important to install OpenCV from source so as to reap the benefits of CUDA
 1. Navigate to the waldo directory
 
 2. Run the installation script for OpenCV
-`sudo ./install_opencv4.0.0_Nano.sh .`
+
+```
+sudo ./install_opencv4.0.0_Nano.sh .
+```
 
 Script obtained from https://github.com/AastaNV/JEP/blob/master/script/install_opencv4.0.0_Nano.sh
 
