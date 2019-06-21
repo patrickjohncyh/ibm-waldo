@@ -17,7 +17,7 @@ The proximity sensor used is the Parallax PING Ultrasonic Sensor. The sensor wor
 
 The diagram below shows the functions corresponding to the different ranges between WALDO and the user.
 
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/3.%20Pi/sensor_ranges.png "Pi function at different ranges from ultrasonic sensor")
+![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/sensor_ranges.png "Sensor Ranges")
 
 The device is disabled if the proximity sensor is blocked, since it detects a range of less than 5cm. Between 5 and 55cm, the user can use the buttons. Between 55 and 70cm, WALDO interprets the user’s intention to be to perform Makaton interpretation, and directs them to stand further away to ensure that the user’s sign can be properly captured by the camera. If the user is further than 70cm away, Makaton interpretation is carried out and the relevant output is transmitted to the speaker.
 
@@ -26,7 +26,7 @@ Function of Buttons
 
 WALDO has 4 hardware buttons. When one is pressed, the Pi detects the button press and plays the correct audio file using the connected speaker. This process is described by the flow diagram below.
 
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/3.%20Pi/audio_flow.png "Logic flow diagram for audio output from Pi")
+![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/audio_flow.png "Logic flow diagram for audio output from Pi")
 
 The IBM_text_to_speech.py code employs IBM Watson text-to-speech on Python to generate the audio files. The contents of the audio files can be edited to tailor the needs of the users by simply modifying or adding to the “predefined_actions” list in the code. The generated audio files are saved in a pre-determined folder on the Pi. In main.py, when a button is pressed, the relevant audio file is accessed and played via the speaker.
 
@@ -43,7 +43,7 @@ Makaton interpretation using machine learning has been implemented on the Jetson
 
 When the Jetson has successfully booted up, a bit sequence of ‘111’ is transmitted to the Pi, producing an audio output of “I’m Ready”, letting the user know that the system is ready for use.
 
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/3.%20Pi/jetson_to_pi.png "Pin connection between Jetson and Pi")
+![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/jetson_to_pi.png "Pin connection between Jetson and Pi")
 
 If the number of signs that can be interpreted increases, more GPIO pins can be used for communication.
 
@@ -52,4 +52,4 @@ Overall Pi Function
 
 The logic flow diagram below describes the overall normal function of the Pi in WALDO.
 
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/3.%20Pi/pi%20logic.jpg "Pi logic flow diagram")
+![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/pi%20logic.jpg "Pi logic flow diagram")
