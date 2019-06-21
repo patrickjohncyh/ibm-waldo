@@ -70,7 +70,7 @@ $ sudo apt-get install python3-pip
 4. Install required python3 packaged for Tensorflow
 
 ```
-$ sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta
+$ sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta tensorboard==1.13.0 tensorflow-estimator==1.13.0
 ```
 
 5. Install the NVIDIA release of tensorflow-gpu for Jetson Nano
