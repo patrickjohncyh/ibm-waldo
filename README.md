@@ -48,11 +48,11 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   <tr>
     <td rowspan="3"><span style="font-weight:bold">Setup</span></td>
     <td>Pi Setup</td>
-    <td></td>
+    <td>Setting up Raspberry Pi</td>
   </tr>
   <tr>
     <td>Jetson Nano Setup</td>
-    <td></td>
+    <td>Setting up Jetson Nano</td>
   </tr>
   <tr>
     <td>Hardware Setup</td>
@@ -61,15 +61,15 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   <tr>
     <td rowspan="5"><span style="font-weight:bold">Machine Learning</span></td>
     <td>Code</td>
-    <td></td>
+    <td>Jetson Nano implementation code and Server training code</td>
   </tr>
   <tr>
     <td>Model and Weights</td>
-    <td></td>
+    <td>Saved weights of the final trained model</td>
   </tr>
   <tr>
     <td>Model History and Evolution</td>
-    <td></td>
+    <td>Model design history and evolution</td>
   </tr>
   <tr>
     <td>Input test videos?</td>
@@ -77,7 +77,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td>Server environment setup for further model training</td>
-    <td></td>
+    <td>Setting up server environment to train model to recognise more than 5 Makaton signs</td>
   </tr>
   <tr>
     <td rowspan="4"><span style="font-weight:bold">Pi</span></td>
