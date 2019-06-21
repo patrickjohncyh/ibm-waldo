@@ -63,7 +63,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/server-training"> Server Training Code </a> </td>
     <td>Code to be run on server for further model training beyond 5 makaton signs</td>
   </tr>
-    <tr>
+  <tr>
     <td rowspan="5"><span style="font-weight:bold">Machine Learning</span></td>
     <td>Jetson Nano Execution Code</td>
     <td>Code to be run on Jetson Nano for running sign recognition</td>
