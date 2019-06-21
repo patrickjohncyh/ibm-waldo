@@ -11,7 +11,7 @@ The table below shows the capabilities of WALDO that have and have not been impl
 
 | No. 	| Capability                                                        	| Status                                                                                                                              	|
 |-----	|-------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------	|
-| 1.  	| Makaton interpretation using machine learning                     	| **Implemented** - Interpretation of 5 signs with high accuracy and low latency.                                                                       **Not Implemented** - Interpretation of other Makaton signs 	|
+| 1.  	| Makaton interpretation using machine learning                     	| **Implemented** - Interpretation of 5 signs with high accuracy and low latency.<br> **Not Implemented** - Interpretation of other Makaton signs 	|
 | 2.  	| Buttons to output pre-set expressions                             	| **Implemented**                                                                                                                         	|
 | 3.  	| User interface to change what expressions button presses output   	| **Not Implemented** - Strings that buttons output cannot be changed remotely, no user interface to change string output                 	|
 | 4.  	| Ambient sensors to analyse and understand the user’s surroundings 	| **Not Implemented**                                                                                                                     	|
