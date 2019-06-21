@@ -51,8 +51,8 @@ Adapted from https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-p
 6. Update and upgrade apt-get:
 
 ```
-sudo apt-get update
-sudo apt-get upgrade
+$ sudo apt-get update
+$ sudo apt-get upgrade
 ```
 
 7. Install system packages as required by TensorFlow:
@@ -105,7 +105,10 @@ Jetson GPIO Installaton
 ---
 
 Installing Jetson GPIO for python3.6 will enable control of the Jetson GPIO pins with python.
-1. `sudo pip3 install  PUT ACTUAL PACAKGE HERE`
+
+```
+sudo pip3 install  PUT ACTUAL PACAKGE HERE
+```
 
 
 GPU/CPU RAM Expansion using Swap File
