@@ -45,12 +45,16 @@ Communication with Jetson
 
 Makaton interpretation using machine learning has been implemented on the Jetson. As the output device, the speaker, is connected to the Pi, the Jetson needs to send the appropriate data to the Pi to produce the correct output. As only 7 messages are required in the present implementation, only 3 bits are necessary. Hence, the Jetson is connected to the Pi using 3 GPIO pins, as shown in the table below.
 
+<Br>
+  
 |**Bit**|**Pin on Jetson**|**Pin on Pi**|
 |-------|-----------------|-------------|
 |Most significant|Pin 33 (GPIO38)|Pin 19 (GPIO10)|
 |Middle|Pin 31 (GPIO200)|Pin23 (GPIO11)|
 |Least significant|Pin 21 (GPIO17)|Pin21 (GPIO9)|
 
+<Br>
+  
 When the Jetson has successfully booted up, a bit sequence of ‘111’ is transmitted to the Pi, producing an audio output of “I’m Ready”, letting the user know that the system is ready for use.
 
  <Br>
