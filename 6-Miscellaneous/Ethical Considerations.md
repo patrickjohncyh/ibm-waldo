@@ -2,6 +2,7 @@
 
 As a device meant for use with vulnerable people and relying on a significant amount of data collection, WALDO raises several ethical concerns that need to be addressed. In this report, this group will examine whether these concerns are founded, and outline what steps have been taken in this project to address them.
 
+<Br>
   
 ## User Privacy
 
@@ -16,7 +17,7 @@ In recent years, with advancements in connectivity and sensor technology, smart 
 -   What privacy protections manufacturers have in place
     
 
-  
+<Br>  
 
 While WALDO is not strictly a smart home device, it possesses many characteristics similar to that of a smart home device:
 
@@ -28,14 +29,14 @@ While WALDO is not strictly a smart home device, it possesses many characteristi
     
 -   WALDO can be connected to the Internet
     
-
+<Br>
   
 
 As such, the privacy concerns that face smart home technologies would face WALDO too, and have to be addressed. Arguably, these concerns are all the more pressing, since WALDO is meant for use with people with learning disabilities, who are more vulnerable than everyday consumers. For example, they might be less aware of the reality of privacy breaches and hacking, and more willing to use a device that is not safe for use. While it may be argued that the onus is on the care home to ensure their residents’ privacy, and care homes such as Precious Homes(1) have their own privacy policy[4], this group believes that WALDO should be built with its users’ privacy as one of its foremost considerations.
 
 > (1) Precious Homes is the care home that this group worked with during this project, and provided recommendations on the use of Makaton
 
-
+<Br>
   
 The first way in which WALDO addresses privacy concerns is in being an on-edge device, with the on-device Nvidia Jetson Nano having sufficient computational power to perform machine learning computation on its own. This obviates the need to send user data, that is, the video used for Makaton interpretation, to a remote server, where it could be compromised or misused.
 
@@ -47,7 +48,7 @@ The second way in which WALDO addresses privacy concerns is in not recording mor
 
 Additional steps to address privacy concerns could include a physical shutter over the camera for when WALDO is not in use, and physical airgapping between network-connected devices and recording devices when Internet connectivity is not required. However, Internet connectivity should still be retained, to allow for software updates to be provided to WALDO, for example, to improve the accuracy and robustness of its machine learning model.
 
-  
+<Br>
 
 ## Data Privacy
 
@@ -55,7 +56,7 @@ Additional steps to address privacy concerns could include a physical shutter ov
 
 In making use of machine learning to perform Makaton interpretation, WALDO requires the collection of a large amount of training data from volunteers. This raises the concern of data privacy of the volunteers, as training data has the potential to be misused. This group has addressed this concern by destroying training data after training has been completed, only providing IBM with the trained model. Further elaboration on this point can be found in the ‘Data Collection’ document under ‘5. Administrative > Data Collection’.
 
-  
+<Br>
 
 ## Consequences for Jobs
 
@@ -67,6 +68,7 @@ A concern with any technological device meant to perform a role previously carri
 
 In conclusion, WALDO has been designed and built specifically with the above mentioned ethical considerations in mind, with specific measures to safeguard privacy and work within existing care home structures. In addition, these considerations should remain a priority when planning further extensions to WALDO.
 
+<Br>
 
 ## Bibliography
 
