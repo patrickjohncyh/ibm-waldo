@@ -48,38 +48,38 @@ Tensorflow Installation
 ---
 Adapted from https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
 
-6. Update and upgrade apt-get:
+1. Update and upgrade apt-get:
 
 ```
 $ sudo apt-get update
 $ sudo apt-get upgrade
 ```
 
-7. Install system packages as required by TensorFlow:
+2. Install system packages as required by TensorFlow:
 
 ```
 $ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev
 ```
 
-8. Install pip3
+3. Install pip3
 
 ```
 $ sudo apt-get install python3-pip
 ```
 
-9. Install required python3 packaged for Tensorflow
+4. Install required python3 packaged for Tensorflow
 
 ```
 $ sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta
 ```
 
-10. Install the NVIDIA release of tensorflow-gpu for Jetson Nano
+5. Install the NVIDIA release of tensorflow-gpu for Jetson Nano
 
 ```
 $ sudo pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==$1.13.1+nv NEED CHECK
 ```
 
-11. Verify that tensorflow-gpu is installed by importing into python3
+6. Verify that tensorflow-gpu is installed by importing into python3
 
 ```
 $ python3
