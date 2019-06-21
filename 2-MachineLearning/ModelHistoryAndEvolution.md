@@ -40,7 +40,7 @@ Refer to [CNN+LSTM Paper](https://static.googleusercontent.com/media/research.go
 
 Just like <b>MobileNetV2 + LSTM</b>, this model employs the use of 2D Convolution Networks pre-trained on Imagenet. For this model, the learnt spatial features are L2 normalised to become vectors of unit length before passing them into the LSTM module. Model achieved a slight boost in validation accuracy to <b>86.35%</b> on 5+1(No action) classes on 20BN-Jester dataset.
 
-4)<space> C3D_L2Norm + LSTM + UF4
+#### 4)<space> C3D_L2Norm + LSTM + UF4
 
 The model employs the use of 3D Convolution Networks to capture spatio-temporal features that are crucial in classifying Makaton signs which are non-static. The learnt spatio-temporal features are then passed into the LSTM to further study its time evolution. Learning not only spatial but temporal features as well allowed the representations of makaton sings to be better captured. This facilitated a huge improvement over the <b>MobileNetV2_L2Norm + LSTM</b> model. Model achieved a validation accuracy of <b>94.64%</b> on 5+1(No action) classes on 20BN-Jester dataset.
 
@@ -54,14 +54,14 @@ This is the same model as the model <b> C3D_L2Norm + LSTM + UF4 </b> above but w
 
 The experimental phase allowed the team to determine which model was best suited for the task of Gesture Recognition. Based on the above results, the C3D + L2Norm + LSTM Models (Models 4 and 5) were shown to be superior over the other models. However, there were still 2 challenges to overcome.
 
-#### 1. Deployment of Model on Jetson Nano
+#### 1) Deployment of Model on Jetson Nano
 
 The model used in the experiments consisted of the full C3D model. In total, together with the LSTM componenet, the proposed model had \~ 30M Parameters. The model was run on the Jetson Nano and it was found that it had an inferece speed of \~1.25s. In other words, it could only run at 0.8 Frames Per Second (FPS). This is far too slow for real-time detection with video frames comining from a camera stream. Furthermore, with that many paramters, end-to-end training with all layers unfrozen will take extremely long.
 
 It was therefore crucial to reduce the model size. 
 
 
-#### 2. Training Model with Limited Dataset
+#### 2) Training Model with Limited Dataset
 
 
 
