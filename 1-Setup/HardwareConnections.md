@@ -1,1 +1,1 @@
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/hardware%20connections.jpg)
+![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/hardware_connections.jpg)
