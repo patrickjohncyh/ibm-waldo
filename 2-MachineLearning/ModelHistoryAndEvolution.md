@@ -1,13 +1,18 @@
 
-Machine Learning / Depp Learning
+Machine Learning / Deep Learning
 ===
 
 This section details the experimentation phase and the deployment phase of the Deep Learning model. The Deep Learning model forms the backbone of WALDO as it performs the crucial task of Makaton Sign Recognition. This section includes the key design decisions and the rationale behind them.
 
+## Go To
+* [Model Development History and Evolution](#model-development-history-and-evolution)
+* [Model Deployment](#model-deployment)
+* [Conclusion](#conclusion)
+
 
 ## Model Development History and Evolution
 
-This sections explains and gives the performance of the Deep Learning models that were experimented with to determine the best model for Makaton Sign Recognition.
+This section explains and provides the performance of the Deep Learning models that were experimented with to determine the best model for Makaton Sign Recognition.
 
 #### Dataset
 In the experimentation phase, the [Jester Dataset](https://20bn.com/datasets/jester/v1#download) was utilised. 6 (Swiping Left,Swiping Down,Thumb Up,Drumming Fingers,Sliding Two Fingers Left,No gesture) out of the 26 Gestures available were selected and used througout all experiments. The Jester Dataset was used whilst the team was still building the Makaton Sign dataset. The use of a prebuilt dataset during the experimentation phase was critical as the dataset is large and diverse enough, providing suffucient data for Deep Learning. This lends to two important aspects in Machine Learning.
