@@ -3,7 +3,7 @@
 
 Go To
 ------
-* 5.4.1 [Group Members](#group-members)
+* 5.4.1 [Group Members](#541-group-members)
 * 5.4.2 [Data Privacy](#data-privacy)
 * 5.4.3 [Method of Data Collection](#method-of-data-collection)
 * 5.4.4 [Ethnic Distribution](#ethnic-distribution)
