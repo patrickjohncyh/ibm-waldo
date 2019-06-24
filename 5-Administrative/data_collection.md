@@ -1,6 +1,14 @@
 Data Collection
 ===============
 
+Go To
+------
+* [Group Members](#group-members)
+* [Data Privacy](#data-privacy)
+* [Method of Data Collection](#method-of-data-collection)
+* [Ethnic Distribution](#ethnic-distribution)
+
+
 Group Members
 --------------
 
