@@ -2,11 +2,11 @@
 
 Go To
 ------
-* [Environmental Sustainbility](#environmental-sustainability)
-* [Economic Sustainability](#economic-sustainability)
+* 6.2.1 [Environmental Sustainbility](#621-environmental-sustainability)
+* 6.2.2 [Economic Sustainability](#622-economic-sustainability)
   
 
-## Environmental Sustainability
+## 6.2.1 Environmental Sustainability
 
   
 
@@ -31,7 +31,7 @@ In spite of this, this group believes that sustainability should still be a cons
 
 <Br>  
 
-## Economic Sustainability
+## 6.2.2 Economic Sustainability
 
   
 
