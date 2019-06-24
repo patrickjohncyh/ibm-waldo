@@ -1,4 +1,4 @@
-# List of Main Hardware Components
+# 4.3 List of Main Hardware Components
 
 The following table shows the various components bought and used in the assembly of WALDO:
 
