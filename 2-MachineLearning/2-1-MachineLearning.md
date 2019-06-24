@@ -49,7 +49,7 @@ Just like <b>MobileNetV2 + LSTM</b>, this model employs the use of 2D Convolutio
 
 The model employs the use of 3D Convolution Networks to capture spatio-temporal features that are crucial in classifying Makaton signs which are non-static. The learnt spatio-temporal features are then passed into the LSTM to further study its time evolution. Learning not only spatial but temporal features as well allowed the representations of makaton sings to be better captured. This facilitated a huge improvement over the <b>MobileNetV2_L2Norm + LSTM</b> model. Model achieved a validation accuracy of <b>94.64%</b> on 5+1(No action) classes on 20BN-Jester dataset.
 
-Refer to [C3D+LSTM Paper](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwiOjovI1vriAhUMilwKHVA_A8AQFjAAegQIAhAC&url=https%3A%2F%2Fwww.mdpi.com%2F1999-5903%2F11%2F2%2F42%2Fpdf&usg=AOvVaw2k7dwm_6BqK9GFhkHDnGis) for more details
+Refer to [C3D+LSTM Paper](https://arxiv.org/pdf/1412.0767.pdf) for more details
 
 #### 5)<space> C3D_L2Norm + LSTM + UF7
 
