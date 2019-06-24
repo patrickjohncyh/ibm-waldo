@@ -73,7 +73,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-1-MachineLearning.md"> 2.1 Machine Learning </a></td>
-    <td>Details model design history and evolution and implementation on edge device</td>
+    <td>Details model design history and evolution as well as implementation on the edge device</td>
   </tr>
   <tr>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-2-ServerEnvironmentSetup.md"> 2.2 Server environment setup for further model training</a></td>
