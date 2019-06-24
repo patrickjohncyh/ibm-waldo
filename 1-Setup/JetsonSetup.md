@@ -1,8 +1,8 @@
 
-Jetson Nano Setup
+1.1 Jetson Nano Setup
 ===
 
-Operating System Setup
+1.1.1 Operating System Setup
 ---
 
 1. Prepare microSD card(Minimum requirement 16GB UHS-1 microSD) and plug-in power supply(20 W). A high speed microSD card is critical in the smooth running of the OS.
@@ -13,7 +13,7 @@ Operating System Setup
 
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/jetson_initial.png "")
 
-Network Connectivity Setup
+1.1.2 Network Connectivity Setup
 ---
 1. Prepare Edimax EW-7811UN-N150 Wi-Fi USB Adaptor and an Ethernet cable.
 2. Connect the Jetson Nano using the Ethernet cable.
@@ -21,7 +21,7 @@ Network Connectivity Setup
 5. If Wi-Fi does not appear to connect, consider removing the Ethernet cable and trying again. During installation phase, it is advised to use Ethernet to ensure a consistent internet connection
 
 
-Fan Cooling Setup
+1.1.3 Fan Cooling Setup
 ---
 Adding a cooling fan will keep the Jetson from overheating and potentially stalling. To automatically initialise the cooling fan, a `cronjob` is added to call the `jetson_clocks` script at boot.
 1. `$ sudo crontab -e`. You may be prompted for your password.
@@ -30,7 +30,7 @@ Adding a cooling fan will keep the Jetson from overheating and potentially stall
 4. `crtl-x` to exit, `Y` to confirm save and `Enter`
 5. `$ sudo reboot`
 
-Power Mode Selection
+1.1.4 Power Mode Selection
 ---
 If facing power issues when running on a battery pack. The operating mode of the Jetson Nano can be altered to use less power.
 
@@ -44,7 +44,7 @@ If facing power issues when running on a battery pack. The operating mode of the
 	2. At the bottom of the file, change ‘PM_CONFIG DEAFULT=N’, where N is the desired Mode (i.e 0 or 1)
 4. It is possible to create a custom operating mode based on your requirements. For further information please refer to the official [documentation](https://docs.nvidia.com/jetson/l4t/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fpower_management_nano.html%23).
  
-Tensorflow Installation
+1.1.5 Tensorflow Installation
 ---
 Adapted from https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
 
@@ -86,7 +86,7 @@ $ python3
 $ import tensorflow
 ```
 
-OpenCV Installation
+1.1.6 OpenCV Installation
 ---
 
 It is important to install OpenCV from source so as to reap the benefits of CUDA GPU acceleration.
@@ -101,7 +101,7 @@ sudo ./install_opencv4.0.0_Nano.sh .
 
 Script obtained from https://github.com/AastaNV/JEP/blob/master/script/install_opencv4.0.0_Nano.sh
 
-Jetson GPIO Installaton
+1.1.7 Jetson GPIO Installaton
 ---
 
 Installing Jetson GPIO for python3.6 will enable control of the Jetson GPIO pins with python.
@@ -111,7 +111,7 @@ sudo pip3 install  PUT ACTUAL PACAKGE HERE
 ```
 
 
-GPU/CPU RAM Expansion using Swap File
+1.1.8 GPU/CPU RAM Expansion using Swap File
 ---
 The Jetson Nano’s RAM is shared between the CPU and the GPU. To ensure that there is sufficient RAM for both, the Swap File is activated. This allows the SD card memory to be temporarily used as RAM.
 
@@ -119,12 +119,12 @@ To increase the amount of RAM available on Jetson Nano, (Only about \~2.7GB left
 https://www.jetsonhacks.com/2019/04/14/jetson-nano-use-more-memory/
 
 
-GPU Verification
+1.1.9 GPU Verification
 ---
 Enter the 2-MachineLearning/jetson-execution folder,
 Run `python3 sanity/tf-test.py` to verify that the Jetson Nano GPU is being utilised by tensorflow.
 
-Running the Model
+1.1.10 Running the Model
 ---
 In the 2-MachineLearning/jetson-execution folder,
 start the demo by running the following command in terminal,`python3 demo.py`
