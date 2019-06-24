@@ -42,6 +42,8 @@ In “main.py”, the NumPy library is required to accurately determine the dist
 
 The Broadcom GPIO Numbers scheme (BCM)  is used in our implementation. This scheme would mean that the pins are identified by their GPIO numbers instead of the pin numbering on the board. An example would be in "main.py” input 1 is written as 22, which corresponds to pin 15 on the Pi, which is labelled as GPIO22 instead of pin 22 on the Pi. 
 
+The image below shows the numbering of pins, as well as the GPIO tagged to the pins on the board. As mentioned above, in the BCM scheme, the GPIO numbers are used instead of the actual pin numbering on the board labelled as 1-40. 
+
 <Br>
 
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/Raspberry%20pi%203%20GPIO_pins_v2.png "GPIO Pins")
