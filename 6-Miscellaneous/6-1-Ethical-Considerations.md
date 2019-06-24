@@ -1,4 +1,4 @@
-# Ethical Considerations
+# 6.1 Ethical Considerations
 
 As a device meant for use with vulnerable people and relying on a significant amount of data collection, WALDO raises several ethical concerns that need to be addressed. In this report, this group will examine whether these concerns are founded, and outline what steps have been taken in this project to address them.
   
