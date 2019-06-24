@@ -15,7 +15,9 @@ Setting up a Raspberry Pi and OS :
 ## Go To
 * 1.2.1 [Ensuring Pi is running an up to date OS version](#121-ensuring-pi-is-running-an-up-to-date-os-version)
 
-Ensuring Pi is running an up to date OS version
+<Br>
+  
+1.2.1 Ensuring Pi is running an up to date OS version
 ------------------------------------------------
 
 The OS of the Pi must be checked to ensure that it is compatible with the setup described. 
