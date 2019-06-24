@@ -81,7 +81,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td rowspan="4"><span style="font-weight:bold">3. Raspberry Pi</span></td>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi"> Overview of Pi Function</a></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi"> 3.1 Overview of Pi Function</a></td>
     <td>Outline of functions and connections of Pi</td>
   </tr>
   <tr>
