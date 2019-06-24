@@ -115,32 +115,32 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Meeting minutes and decisions made</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/gantt_chart.md">5.2 Gantt Chart</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/5-2-Gantt-Chart.md">5.2 Gantt Chart</td>
     <td>Intended timeline of project (plotted during first meeting at IBM Hursley)</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/Bill_of_Materials.md">5.3 Bill of Materials</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/5-3-Bill-of-Materials.md">5.3 Bill of Materials</td>
     <td>Record of expenditure and outline of cost of device</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/data_collection.md">5.4 Data Collection</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/5-4-Data-Collection.md">5.4 Data Collection</td>
     <td>Outline of procedure, considerations and product of data collection</td>
   </tr>
   <tr>
     <td rowspan="6"><span style="font-weight:bold">6. Miscellaneous</span></td>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Ethical%20Considerations.md">6.1 Ethical Considerations</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/6-1-Ethical-Considerations.md">6.1 Ethical Considerations</td>
     <td>Outline of ethical considerations in the design, building and use of WALDO</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Sustainability%20Considerations.md"> 6.2 Sustainability considerations</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/6-2-Sustainability-Considerations.md"> 6.2 Sustainability considerations</td>
     <td>Outline of sustainability considerations in the design, building and use of WALDO</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/blog.md">6.3 Blog</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/6-3-Blog.md">6.3 Blog</td>
     <td>Rationale behind the blog and links to the blog posts</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Future%20Work.md">6.4 Future Work</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/6-4-Future-Work.md">6.4 Future Work</td>
     <td>Discussion of present implementation and possible extensions to the project</td>
   </tr>
   <tr>
