@@ -10,7 +10,7 @@ This section details a step-by-step guide to successfully setup the environment 
 * 1.1.4 [Power Mode Selection](#114-power-mode-selection)
 * 1.1.5 [Tensorflow Installation](#115-tensorflow-installation)
 * 1.1.6 [OpenCV Installation](#116-opencv-installation)
-* 1.1.7 [Jetson GPIO Installaton](#117-gpio-installation)
+* 1.1.7 [Jetson GPIO Installaton](#117-jetson-gpio-installation)
 * 1.1.8 [GPU/CPU RAM Expansion using Swap File](#118-gpucpu-ram-expansion-using-swap-file)
 * 1.1.9 [GPU Verification](#119-gpu-verification)
 * 1.1.10 [Running the Model](#1110-running-the-model)
