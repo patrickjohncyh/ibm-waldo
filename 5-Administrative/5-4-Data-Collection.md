@@ -3,14 +3,14 @@
 
 Go To
 ------
-* [Group Members](#group-members)
-* [Data Privacy](#data-privacy)
-* [Method of Data Collection](#method-of-data-collection)
-* [Ethnic Distribution](#ethnic-distribution)
+* 5.4.1 [Group Members](#group-members)
+* 5.4.2 [Data Privacy](#data-privacy)
+* 5.4.3 [Method of Data Collection](#method-of-data-collection)
+* 5.4.4 [Ethnic Distribution](#ethnic-distribution)
 
 <Br>
 
-Group Members
+5.4.1 Group Members
 --------------
 
 Initially, data collection was conducted internally, with three members of the group acting as signers. The initial dataset, encompassing all 5 actions, has the following characteristics:
@@ -23,14 +23,14 @@ This initial dataset consisted of 2700 videos. However, it was quickly discovere
 
 <Br>
  
-Data Privacy
+5.4.2 Data Privacy
 -----------
 
 In order to keep the project ‘internal’ for now, the decision was taken to only film volunteers around the Imperial College London campus at South Kensington. As such, only staff and students of Imperial College were filmed as volunteers. Before filming any volunteer, the purpose of the project and the reasons for filming were explained. Filming would then take place only if he or she gave their consent to the video recordings on the basis that the recordings were only to be used for this project and would be deleted at the end of the project.
 
 <Br>
 
-Method of Data Collection
+5.4.3 Method of Data Collection
 ------------------------
 
 It soon became clear that in order to have an accurate and robust neural network model, a significantly larger amount of data had to be collected. In other words, the gathering of data had to be extended beyond the three group members. The dataset collected had to comprise of different people of varying ethnicity, filmed under different lighting conditions and backgrounds.
@@ -39,7 +39,7 @@ Volunteers were randomly found and filmed around the Imperial College London cam
 
 <Br>
 
-Ethnic Distribution
+5.4.4 Ethnic Distribution
 -------------------
 
 The dataset has the following ethnic composition(1).
