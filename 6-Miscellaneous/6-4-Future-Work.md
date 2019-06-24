@@ -7,7 +7,7 @@ This section is a discussion of the present implementation and possible extensio
 * [Improvements to Present Hardware](#improvements-to-present-hardware)
 * [Addidtional Capabilities](#additional-capabilities)
 
-
+<Br>
   
 ## Discussion of Present Implementation
 
