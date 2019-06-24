@@ -1,7 +1,7 @@
 2.2 Server Environment Setup
 ===
 
-This section provides the basic instructions on how to setup a server to perform Machine Learning on Keras+Tensorflow. The server-training folder provides the code to perform training on the 6 actions as detailed in [Section 2.1 - Machine Learning](https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-1-MachineLearning.md).
+This section provides the basic instructions on how to setup a server to perform Machine Learning on Keras+Tensorflow. The [server-training folder](https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/server-training) provides the code to perform training on the 6 actions as detailed in [Section 2.1 - Machine Learning](https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-1-MachineLearning.md).
 
 2.2.1 Installing Nvidia Driver, CUDA and cuDNN
 ---
