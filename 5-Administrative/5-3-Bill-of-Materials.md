@@ -1,4 +1,4 @@
-# Bill of Materials
+# 5.3 Bill of Materials
 
 The following table shows the various components bought and used in the assembly of WALDO:
 
