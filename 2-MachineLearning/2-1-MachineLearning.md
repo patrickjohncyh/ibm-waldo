@@ -97,5 +97,5 @@ Actions used:
 ```
 The training log has been provided in this directory.
 
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/final_training_curve.png))
+![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/final_training_curve.png)
 
