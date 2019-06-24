@@ -59,7 +59,7 @@ This is the same model as the model <b> C3D_L2Norm + LSTM + UF4 </b> above but w
 
 The experimental phase allowed the team to determine which model was best suited for the task of Gesture Recognition. Based on the above results, the C3D + L2Norm + LSTM Models (Models 4 and 5) were shown to be superior over the other models. However, there were still 2 challenges to overcome.
 
-#### 1) Deployment of Model on Jetson Nano
+#### 2.1.2.1 Deployment of Model on Jetson Nano
 
 The model used in the experiments consisted of the full C3D model. In total, together with the LSTM componenet, the proposed model had \~ 30M Parameters. The model was run on the Jetson Nano and it was found that it had an inferece rate of \~1.25 inferences/s. In other words, it could only run at 0.8 Frames Per Second (FPS). This is far too slow for real-time detection with video frames comining from a camera stream. Furthermore, with that many paramters, end-to-end training with all layers unfrozen will take extremely long.
 
@@ -75,7 +75,7 @@ After applying the above modifications, the model was observed to have \~3M para
 
 To test the limits of the minimized model, it was trained with the training data (118,562 samples) from the Jester Dataset which had 27 classes. We used 80% of the training data as the training set and 20% of the training data as the validation set. The model was trained for 5 epochs and it had obtained a training accuracy of 88% and a validation accuracy of 87%. We don’t believe that the model had overfitted yet (meaning that it was possible that the training and validation accuracy could still rise), but this provided sufficient evidence of the models’ capacity and capabilities.
 
-#### 2) Training Model with Limited Dataset
+#### 2.1.2.2 Training Model with Limited Dataset
 
 Given the time constraints, the collected dataset was not as large and diverse as that of the Jester Dataset. The dataset collection process is detailed [here](https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/data_collection.md). We were only able to collect a total of 175 videos per class (5 in this case) for our training set. Of the 175 videos, 70 of them were of the three group members tasked with data collection, leaving 105 videos per class that is of random people. For our validation set, we had 50 videos per class, all of which are of random people.
 
