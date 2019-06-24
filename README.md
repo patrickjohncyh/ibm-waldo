@@ -98,20 +98,20 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td rowspan="3"><span style="font-weight:bold">4. Hardware</span></td>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/4-Hardware/3D%20Printing%20STL%20Files">4.1 3D printing files</a></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/4-Hardware/4-1-3D-Printing-STL-Files">4.1 3D printing files</a></td>
     <td>Contains Standard Tessellation Language (STL) files of the Jetson Nano case, the Pi case, the button support structure and WALDO’s eyepiece</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Power_Source.md">4.2 Power Supply</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/4-2-Power_Source.md">4.2 Power Supply</td>
     <td>Summary of considerations when choosing WALDO’s power supply</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Hardware_List.md">4.3 Hardware List</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/4-3-Hardware_List.md">4.3 Hardware List</td>
     <td>List of all hardware components used in assembly of WALDO</td>
   </tr>
   <tr>
     <td rowspan="4"><span style="font-weight:bold">5. Administrative</span></td>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/5-Administrative/Record%20of%20Meetings">5.1 Record of Meetings</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/5-Administrative/5-1-Record-of-Meetings">5.1 Record of Meetings</td>
     <td>Meeting minutes and decisions made</td>
   </tr>
   <tr>
