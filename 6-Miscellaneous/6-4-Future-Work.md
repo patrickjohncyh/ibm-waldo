@@ -1,11 +1,16 @@
 
 # 6.4 Future Work
+This section is a discussion of the present implementation and possible extensions to the project.
+
+## Go To
+* [Discussion of Present Implementation](#discussion-of-present-implementation)
+* [Improvements to Present Hardware](#improvements-to-present-hardware)
+* [Addidtional Capabilities](#additional-capabilities)
+
 
   
-
 ## Discussion of Present Implementation
 
-  
 
 The table below shows the capabilities of WALDO that have and have not been implemented.
 
