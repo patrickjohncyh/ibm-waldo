@@ -64,7 +64,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Code to be run on server for further model training beyond 5 makaton signs</td>
   </tr>
   <tr>
-    <td>Jetson Nano Execution Code</td>
+    <td><a href ="https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/jetson-execution">Jetson Nano Execution Code</a></td>
     <td>Code to be run on Jetson Nano for running sign recognition</td>
   </tr>
   <tr>
@@ -72,11 +72,11 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Saved weights of the final trained model</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/ModelHistoryAndEvolution.md"> Model History and Evolution </a></td>
-    <td>Model design history and evolution</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-1-MachineLearning.md"> 2.1 Machine Learning </a></td>
+    <td>Details model design history and evolution and implementation on edge device</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/ServerEnvironmentSetup.md"> Server environment setup for further model training</a></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-2-ServerEnvironmentSetup.md"> 2.2 Server environment setup for further model training</a></td>
     <td>Setting up server environment to train model to recognise more than 5 Makaton signs</td>
   </tr>
   <tr>
