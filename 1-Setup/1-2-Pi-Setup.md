@@ -1,4 +1,4 @@
-Raspberry Pi setup
+1.2 Raspberry Pi setup
 ==================
 Setting up a Raspberry Pi and OS :
 
@@ -11,8 +11,13 @@ Setting up a Raspberry Pi and OS :
 7. Connect the power cable to the Pi. With all prior steps done, the video output would display a boot up screen and the Pi would be fully loaded on.  
 8. The final step to the set up would be to adjust the time and date setting as well as a language option for the Pi. With all these done, the Pi is set up and ready to go. 
 
- 
-Ensuring Pi is running an up to date OS version
+
+## Go To
+* 1.2.1 [Ensuring Pi is running an up to date OS version](#121-ensuring-pi-is-running-an-up-to-date-os-version)
+
+<Br>
+  
+1.2.1 Ensuring Pi is running an up to date OS version
 ------------------------------------------------
 
 The OS of the Pi must be checked to ensure that it is compatible with the setup described. 
