@@ -68,7 +68,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Code to be run on Jetson Nano for running sign recognition</td>
   </tr>
   <tr>
-    <td>Model and Weights</td>
+    <td><a href = "https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/jetson-execution/checkpoint_model"> Model and Weights</a></td>
     <td>Saved weights of the final trained model</td>
   </tr>
   <tr>
