@@ -5,9 +5,9 @@
 This section details the experimentation phase and the deployment phase of the Deep Learning model. The Deep Learning model forms the backbone of WALDO as it performs the crucial task of Makaton Sign Recognition. This section includes the key design decisions and the rationale behind them.
 
 ## Go To
-* 2.1.1 [Model Development History and Evolution](#model-development-history-and-evolution)
-* 2.1.2 [Model Deployment](#model-deployment)
-* 2.1.3 [Conclusion](#conclusion)
+* 2.1.1 [Model Development History and Evolution](#211-model-development-history-and-evolution)
+* 2.1.2 [Model Deployment](#212-model-deployment)
+* 2.1.3 [Conclusion](#213-conclusion)
 
 
 ## 2.1.1 Model Development History and Evolution
