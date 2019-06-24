@@ -3,13 +3,13 @@
 This section is a discussion of the present implementation and possible extensions to the project.
 
 ## Go To
-* [Discussion of Present Implementation](#discussion-of-present-implementation)
-* [Improvements to Present Hardware](#improvements-to-present-hardware)
-* [Addidtional Capabilities](#additional-capabilities)
+* 6.4.1 [Discussion of Present Implementation](#641-discussion-of-present-implementation)
+* 6.4.2 [Improvements to Present Hardware](#642-improvements-to-present-hardware)
+* 6.4.3 [Addidtional Capabilities](#643-additional-capabilities)
 
 <Br>
   
-## Discussion of Present Implementation
+## 6.4.1 Discussion of Present Implementation
 
 
 The table below shows the capabilities of WALDO that have and have not been implemented.
@@ -24,7 +24,7 @@ The table below shows the capabilities of WALDO that have and have not been impl
 
 <Br>
 
-## Improvements to Present Hardware
+## 6.4.2 Improvements to Present Hardware
 
   
 
@@ -49,7 +49,7 @@ The external physical components of WALDO could also stand to be improved. Impro
 
 <Br>  
 
-## Additional Capabilities
+## 6.4.3 Additional Capabilities
 
   
 
