@@ -1,20 +1,20 @@
 
-Machine Learning / Deep Learning
+2.1 Machine Learning / Deep Learning
 ===
 
 This section details the experimentation phase and the deployment phase of the Deep Learning model. The Deep Learning model forms the backbone of WALDO as it performs the crucial task of Makaton Sign Recognition. This section includes the key design decisions and the rationale behind them.
 
 ## Go To
-* [Model Development History and Evolution](#model-development-history-and-evolution)
-* [Model Deployment](#model-deployment)
-* [Conclusion](#conclusion)
+* 2.1.1 [Model Development History and Evolution](#model-development-history-and-evolution)
+* 2.1.2 [Model Deployment](#model-deployment)
+* 2.1.3 [Conclusion](#conclusion)
 
 
-## Model Development History and Evolution
+## 2.1.1 Model Development History and Evolution
 
 This section explains and provides the performance of the Deep Learning models that were experimented with to determine the best model for Makaton Sign Recognition.
 
-#### Dataset
+#### 2.1.1.1 Dataset
 In the experimentation phase, the [Jester Dataset](https://20bn.com/datasets/jester/v1#download) was utilised. 6 (Swiping Left,Swiping Down,Thumb Up,Drumming Fingers,Sliding Two Fingers Left,No gesture) out of the 26 Gestures available were selected and used througout all experiments. The Jester Dataset was used whilst the team was still building the Makaton Sign dataset. The use of a prebuilt dataset during the experimentation phase was critical as the dataset is large and diverse enough, providing suffucient data for Deep Learning. This lends to two important aspects in Machine Learning.
 
 1. Training --- It is vital to have sufficient data for the training set to improve the model's ability to generalise.
@@ -23,7 +23,7 @@ In the experimentation phase, the [Jester Dataset](https://20bn.com/datasets/jes
 
 Therefore, the Jester dataset provides confidence in the results of the experiments.
 
-#### Experimental Results
+#### 2.1.1.2 Experimental Results
 The plot below gives a summary of the performance (accuracy) of the various models.
 
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/model_validation.png)
@@ -55,7 +55,7 @@ Refer to [C3D+LSTM Paper](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source
 
 This is the same model as the model <b> C3D_L2Norm + LSTM + UF4 </b> above but with the final 7 layers unfrozen(3 more than UF4). This allowed the model to better learn the patterns on the Jester dataset as compared to just using the pre-trained weights that are not tuned specifically to Jester. Model achieved a validation accuracy of <b>96.69%</b> on 5+1(No action) classes on 20BN-Jester dataset.
 
-## Model Deployment
+## 2.1.2 Model Deployment
 
 The experimental phase allowed the team to determine which model was best suited for the task of Gesture Recognition. Based on the above results, the C3D + L2Norm + LSTM Models (Models 4 and 5) were shown to be superior over the other models. However, there were still 2 challenges to overcome.
 
@@ -69,7 +69,7 @@ Firstly, considering that 3D Convolution is computationally expensive, the last 
 
 Another aspect of convolution that can lead to computational savings is the number of output filters of the convolution operation. Theoretically, the computational complexity of each layer should scale linearly with the number of output filters. In reality, the computational savings may not be exactly linear due to optimizations applied by cuDNN on GPU hardware. Nevertheless, with the goal of improving inference rate, the number of filters for first 4 Convlutional layers was reduced by a factor of 2 and the by a factor of 4 for the last 2 layers.
 
-Lastly, the dimensions (Width x Height x Depth) of the input to a convolution is another factor that determines its speed. The input layer has dimensions (30,112,112,3) and the input convolution in the original C3D model has strides (1,1,1) (D,W,H), padding set to 'same' and 64 output filters. Therefore it's output would be of shape (30,112,112,64). The sheer size of this layer will trickle down the rest of the model. Therefore, the first convolutional layer was modified to have stirdes (1,2,2) i.e stride 1 along the temporal domain, and stride 2 along the spatial domain, reducing its output to shape (30,56,56,64), a reduction by a factor of 4.
+Lastly, the dimensions (Width x Height x Depth) of the input to a convolution is another factor that determines its speed. The input layer has dimensions (30,112,112,3) and the input convolution in the original C3D model has strides (1,1,1) (D,W,H), padding set to 'same' and 64 output filters. Therefore it's output would be of shape (30,112,112,64). The sheer size of this layer will trickle down the rest of the model. Therefore, the first convolutional layer was modified to have stirdes (1,2,2) i.e stride 1 along the temporal domain, and stride 2 along the spatial domain, and the number of output filters halved, reducing its output to shape (30,56,56,32), a reduction by a factor of 4.
 
 After applying the above modifications, the model was observed to have \~3M parameters. The model was then run on the Jetson Nano and an infernece rate of \~0.125 inferences/s or 8 FPS was observed. Sufficient for smooth, real-time gesture detection.
 
@@ -85,7 +85,7 @@ Data augmentation was deployed to circumvent the problem of limited data. Data a
 
 Additionally, data from the Jester Dataset was also integrated into the model. Therefore, on top of the augmented data, the model was also trained with non-conflicting actions (i.e there is a _Thumb Up_ in Jester which clashes with the _Good_ action). Having more data from both our augmented dataset and the Jester dataset would enable the model to better learn the important spatio-temporal features for gesture recognition. Having additional gestures from Jester would force the model to learn a better representation of the gestures and to also focus on the salient parts of the data that are most pertinent to recognising gestures.
 
-## Conclusion
+## 2.1.3 Conclusion
 
 The model is able to achieve a peak validation accuracy of 89.5%. Whilst at first glance, this may seem like a downgrade from the 91.6% obtained without augmentation, it is important to point out that the 89.5% validation accuracy was obtained over 26 classes (3 times more classes that before) and also on substantially more data (22,462 samples). This gave confidence that the validation loss and accuracy reflects well the model’s out of sample performance. 
 
