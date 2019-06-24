@@ -3,6 +3,14 @@
 
 This section provides the basic instructions on how to setup a server to perform Machine Learning on Keras+Tensorflow. The [server-training folder](https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/server-training) provides the code to perform training on the 6 actions as detailed in [Section 2.1 - Machine Learning](https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-1-MachineLearning.md).
 
+
+## Go To
+* 2.2.1 [Installing Nvidia Driver, CUDA and cuDNN](#221-installing-nvidia-driver-cuda-and-cudnn)
+* 2.2.2 [Installing Python packages](#222-installing-python-packages)
+* 2.2.3 [Download 20BN-Jester Dataset](#223-download-20bn-jester-dataset)
+* 2.2.4 [Generate training CSV](#224-generate-training-csv)
+* 2.2.5 [Training](#225-start-training)
+
 2.2.1 Installing Nvidia Driver, CUDA and cuDNN
 ---
 
@@ -31,37 +39,37 @@ We used Python v3.5.2 but we recommend v3.6.8 or the latest version for compatib
 
 Below is a summary of the main packages required and the versions we used for model training:
 
-> h5py==2.9.0
->
-> imageio==2.5.0
->
-> imgaug==0.2.9
->
-> Keras==2.2.4
->
-> Keras-Applications==1.0.7
->
-> Keras-Preprocessing==1.0.9
->
-> matplotlib==3.0.3
->
-> numpy==1.16.4
->
-> pandas==0.24.2
->
-> Pillow==6.0.0
->
-> scikit-image==0.15.0
->
-> scikit-learn==0.20.3
->
-> scipy==1.3.0
->
-> tensorflow==1.13.1
->
-> tensorflow-gpu==1.13.1
->
-> tqdm==4.31.1
+h5py==2.9.0
+
+imageio==2.5.0
+
+imgaug==0.2.9
+
+Keras==2.2.4
+
+Keras-Applications==1.0.7
+
+Keras-Preprocessing==1.0.9
+
+matplotlib==3.0.3
+
+numpy==1.16.4
+
+pandas==0.24.2
+
+Pillow==6.0.0
+
+scikit-image==0.15.0
+
+scikit-learn==0.20.3
+
+scipy==1.3.0
+
+tensorflow==1.13.1
+
+tensorflow-gpu==1.13.1
+
+tqdm==4.31.1
 
 2.2.3 Download 20BN-Jester Dataset
 ---
@@ -74,7 +82,7 @@ You may obtain and download the Jester Dataset from [here](https://20bn.com/data
 To generate the CSV used for training, run `python3 utils/gen-training-csv.py`.
 You may also select the actions for the model to train on by editing the mask in the python file.
 
-2.2.5 Start training
+2.2.5 Training
 ---
 
 To begin training the model, run `python3 training.py`
