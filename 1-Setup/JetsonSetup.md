@@ -1,6 +1,7 @@
 
 1.1 Jetson Nano Setup
 ===
+This section details a step-by-step guide to successfully setup the environment for the Jetson Nano to perform Makaton sign recognition on a live video input from a webcam.
 
 1.1.1 Operating System Setup
 ---
