@@ -89,7 +89,7 @@ Additionally, data from the Jester Dataset was also integrated into the model. T
 
 The model is able to achieve a peak validation accuracy of 89.5%. Whilst at first glance, this may seem like a downgrade from the 91.6% obtained without augmentation, it is important to point out that the 89.5% validation accuracy was obtained over 26 classes (3 times more classes that before) and also on substantially more data (22,462 samples). This gave confidence that the validation loss and accuracy reflects well the model’s out of sample performance.
 
-Below is the plot of the final learning curve. The model used is **c3d_super_lite**, trained for 30 Epochs on the Jester Dataset combined with the collected dataset of 5 Makaton Signs. Augmentation was applied so the ratio of samples from each class was 1:1 across both datasets. 
+Below is the plot of the final learning curve. The model used is **c3d_super_lite**, trained for 30 Epochs on the Jester Dataset combined with the collected dataset of 5 Makaton Signs. Augmentation was applied so the ratio of samples from each class was 1:1 across both datasets. **Adam** optimiser was used with **categorical crossentropy** as loss. The best model had a validation loss of 0.3683 and a validation accuracy of 0.9038.
 
 Actions used:
 ```
