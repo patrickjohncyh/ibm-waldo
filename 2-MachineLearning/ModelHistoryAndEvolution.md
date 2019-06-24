@@ -1,20 +1,20 @@
 
-2.1 Machine Learning / Deep Learning
+Machine Learning / Deep Learning
 ===
 
 This section details the experimentation phase and the deployment phase of the Deep Learning model. The Deep Learning model forms the backbone of WALDO as it performs the crucial task of Makaton Sign Recognition. This section includes the key design decisions and the rationale behind them.
 
 ## Go To
-* 2.1.1 [Model Development History and Evolution](#211-model-development-history-and-evolution)
-* 2.1.2 [Model Deployment](#212-model-deployment)
-* 2.1.3 [Conclusion](#213-conclusion)
+* [Model Development History and Evolution](#model-development-history-and-evolution)
+* [Model Deployment](#model-deployment)
+* [Conclusion](#conclusion)
 
 
-## 2.1.1 Model Development History and Evolution
+## Model Development History and Evolution
 
 This section explains and provides the performance of the Deep Learning models that were experimented with to determine the best model for Makaton Sign Recognition.
 
-#### 2.1.1.1 Dataset
+#### Dataset
 In the experimentation phase, the [Jester Dataset](https://20bn.com/datasets/jester/v1#download) was utilised. 6 (Swiping Left,Swiping Down,Thumb Up,Drumming Fingers,Sliding Two Fingers Left,No gesture) out of the 26 Gestures available were selected and used througout all experiments. The Jester Dataset was used whilst the team was still building the Makaton Sign dataset. The use of a prebuilt dataset during the experimentation phase was critical as the dataset is large and diverse enough, providing suffucient data for Deep Learning. This lends to two important aspects in Machine Learning.
 
 1. Training --- It is vital to have sufficient data for the training set to improve the model's ability to generalise.
@@ -23,7 +23,7 @@ In the experimentation phase, the [Jester Dataset](https://20bn.com/datasets/jes
 
 Therefore, the Jester dataset provides confidence in the results of the experiments.
 
-#### 2.1.1.2 Experimental Results
+#### Experimental Results
 The plot below gives a summary of the performance (accuracy) of the various models.
 
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/model_validation.png)
@@ -55,11 +55,11 @@ Refer to [C3D+LSTM Paper](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source
 
 This is the same model as the model <b> C3D_L2Norm + LSTM + UF4 </b> above but with the final 7 layers unfrozen(3 more than UF4). This allowed the model to better learn the patterns on the Jester dataset as compared to just using the pre-trained weights that are not tuned specifically to Jester. Model achieved a validation accuracy of <b>96.69%</b> on 5+1(No action) classes on 20BN-Jester dataset.
 
-## 2.1.2 Model Deployment
+## Model Deployment
 
 The experimental phase allowed the team to determine which model was best suited for the task of Gesture Recognition. Based on the above results, the C3D + L2Norm + LSTM Models (Models 4 and 5) were shown to be superior over the other models. However, there were still 2 challenges to overcome.
 
-#### 2.1.2.1 Deployment of Model on Jetson Nano
+#### 1) Deployment of Model on Jetson Nano
 
 The model used in the experiments consisted of the full C3D model. In total, together with the LSTM componenet, the proposed model had \~ 30M Parameters. The model was run on the Jetson Nano and it was found that it had an inferece rate of \~1.25 inferences/s. In other words, it could only run at 0.8 Frames Per Second (FPS). This is far too slow for real-time detection with video frames comining from a camera stream. Furthermore, with that many paramters, end-to-end training with all layers unfrozen will take extremely long.
 
@@ -75,7 +75,7 @@ After applying the above modifications, the model was observed to have \~3M para
 
 To test the limits of the minimized model, it was trained with the training data (118,562 samples) from the Jester Dataset which had 27 classes. We used 80% of the training data as the training set and 20% of the training data as the validation set. The model was trained for 5 epochs and it had obtained a training accuracy of 88% and a validation accuracy of 87%. We don’t believe that the model had overfitted yet (meaning that it was possible that the training and validation accuracy could still rise), but this provided sufficient evidence of the models’ capacity and capabilities.
 
-#### 2.1.2.2 Training Model with Limited Dataset
+#### 2) Training Model with Limited Dataset
 
 Given the time constraints, the collected dataset was not as large and diverse as that of the Jester Dataset. The dataset collection process is detailed [here](https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/data_collection.md). We were only able to collect a total of 175 videos per class (5 in this case) for our training set. Of the 175 videos, 70 of them were of the three group members tasked with data collection, leaving 105 videos per class that is of random people. For our validation set, we had 50 videos per class, all of which are of random people.
 
@@ -85,17 +85,9 @@ Data augmentation was deployed to circumvent the problem of limited data. Data a
 
 Additionally, data from the Jester Dataset was also integrated into the model. Therefore, on top of the augmented data, the model was also trained with non-conflicting actions (i.e there is a _Thumb Up_ in Jester which clashes with the _Good_ action). Having more data from both our augmented dataset and the Jester dataset would enable the model to better learn the important spatio-temporal features for gesture recognition. Having additional gestures from Jester would force the model to learn a better representation of the gestures and to also focus on the salient parts of the data that are most pertinent to recognising gestures.
 
-## 2.1.3 Conclusion
+## Conclusion
 
-The model is able to achieve a peak validation accuracy of 89.5%. Whilst at first glance, this may seem like a downgrade from the 91.6% obtained without augmentation, it is important to point out that the 89.5% validation accuracy was obtained over 26 classes (3 times more classes that before) and also on substantially more data (22,462 samples). This gave confidence that the validation loss and accuracy reflects well the model’s out of sample performance.
+The model is able to achieve a peak validation accuracy of 89.5%. Whilst at first glance, this may seem like a downgrade from the 91.6% obtained without augmentation, it is important to point out that the 89.5% validation accuracy was obtained over 26 classes (3 times more classes that before) and also on substantially more data (22,462 samples). This gave confidence that the validation loss and accuracy reflects well the model’s out of sample performance. 
 
-Below is the plot of the final learning curve. The model used is **c3d_super_lite**, trained for 30 Epochs on the Jester Dataset combined with the collected dataset of 5 Makaton Signs. Augmentation was applied so the ratio of samples from each class was 1:1 across both datasets. 
-
-Actions used:
-```
-['Dinner', 'Doing other things', 'Good', 'Home', 'No', 'No gesture', 'Pulling Hand In', 'Pulling Two Fingers In', 'Pushing Hand Away', 'Pushing Two Fingers Away', 'Rolling Hand Backward', 'Rolling Hand Forward', 'Sorry', 'Sliding Two Fingers Down', 'Sliding Two Fingers Left', 'Sliding Two Fingers Up', 'Stop Sign', 'Swiping Down', 'Swiping Left', 'Swiping Up', 'Turning Hand Clockwise', 'Turning Hand Counterclockwise', 'Zooming In With Full Hand', 'Zooming In With Two Fingers', 'Zooming Out With Full Hand', 'Zooming Out With Two Fingers']
-```
-The training log has been provided in this directory.
-
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/final_training_curve.png))
+Below shows the training curve of the final model. 
 
