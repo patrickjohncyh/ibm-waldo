@@ -1,4 +1,4 @@
-Overview of Pi Function
+3.Overview of Pi Function
 =======================
 
 To relieve the computational load imposed on the Jetson, all functions other than running the machine learning model have been offloaded to a Raspberry Pi 3 Model B. This allows the Jetson to be used to identify Makaton signs with low latency and high inference rate. The functions the Pi performs are:
