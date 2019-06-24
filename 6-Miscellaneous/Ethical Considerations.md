@@ -4,6 +4,12 @@ As a device meant for use with vulnerable people and relying on a significant am
 
 <Br>
   
+## Go To 
+* [User Privacy](#user-privacy)
+* [Data Privacy](#data-privacy)
+* [Consequnces for Jobs](#consequences-for-jobs)
+  
+  
 ## User Privacy
 
 In recent years, with advancements in connectivity and sensor technology, smart home devices have become increasingly ubiquitous in developed countries[1][2]. However, data privacy is one key concern for smart home users; concerns include[3]:
