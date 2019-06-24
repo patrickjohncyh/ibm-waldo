@@ -32,20 +32,35 @@ We used Python v3.5.2 but we recommend v3.6.8 or the latest version for compatib
 Below is a summary of the main packages required and the versions we used for model training:
 
 > h5py==2.9.0
+
 > imageio==2.5.0
+
 > imgaug==0.2.9
+
 > Keras==2.2.4
+
 > Keras-Applications==1.0.7
+
 > Keras-Preprocessing==1.0.9
+
 > matplotlib==3.0.3
+
 > numpy==1.16.4
+
 > pandas==0.24.2
+
 > Pillow==6.0.0
+
 > scikit-image==0.15.0
+
 > scikit-learn==0.20.3
+
 > scipy==1.3.0
+
 > tensorflow==1.13.1
+
 > tensorflow-gpu==1.13.1
+
 > tqdm==4.31.1
 
 2.2.3 Download 20BN-Jester Dataset
