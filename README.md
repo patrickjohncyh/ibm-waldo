@@ -59,7 +59,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Diagram of device hardware connections</td>
   </tr>
   <tr>
-    <td rowspan="5"><span style="font-weight:bold">Machine Learning</span></td>
+    <td rowspan="5"><span style="font-weight:bold">2. Machine Learning</span></td>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/server-training"> Server Training Code</a></td>
     <td>Code to be run on server for further model training beyond 5 makaton signs</td>
   </tr>
@@ -80,7 +80,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Setting up server environment to train model to recognise more than 5 Makaton signs</td>
   </tr>
   <tr>
-    <td rowspan="4"><span style="font-weight:bold">Raspberry Pi</span></td>
+    <td rowspan="4"><span style="font-weight:bold">3. Raspberry Pi</span></td>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi"> Overview of Pi Function</a></td>
     <td>Outline of functions and connections of Pi</td>
   </tr>
@@ -97,58 +97,58 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Logic for Pi function</td>
   </tr>
   <tr>
-    <td rowspan="3"><span style="font-weight:bold">Hardware</span></td>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/4-Hardware/3D%20Printing%20STL%20Files">3D printing files</a></td>
+    <td rowspan="3"><span style="font-weight:bold">4. Hardware</span></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/4-Hardware/3D%20Printing%20STL%20Files">4.1 3D printing files</a></td>
     <td>Contains Standard Tessellation Language (STL) files of the Jetson Nano case, the Pi case, the button support structure and WALDO’s eyepiece</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Power_Source.md"> Power Supply</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Power_Source.md">4.2 Power Supply</td>
     <td>Summary of considerations when choosing WALDO’s power supply</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Hardware_List.md"> Hardware List</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/Hardware_List.md">4.3 Hardware List</td>
     <td>List of all hardware components used in assembly of WALDO</td>
   </tr>
   <tr>
-    <td rowspan="4"><span style="font-weight:bold">Administrative</span></td>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/5-Administrative/Record%20of%20Meetings"> Record of Meetings</td>
+    <td rowspan="4"><span style="font-weight:bold">5. Administrative</span></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/5-Administrative/Record%20of%20Meetings">5.1 Record of Meetings</td>
     <td>Meeting minutes and decisions made</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/gantt_chart.md"> Gantt Chart</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/gantt_chart.md">5.2 Gantt Chart</td>
     <td>Intended timeline of project (plotted during first meeting at IBM Hursley)</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/Bill_of_Materials.md"> Bill of Materials</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/Bill_of_Materials.md">5.3 Bill of Materials</td>
     <td>Record of expenditure and outline of cost of device</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/data_collection.md"> Data Collection</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/data_collection.md">5.4 Data Collection</td>
     <td>Outline of procedure, considerations and product of data collection</td>
   </tr>
   <tr>
-    <td rowspan="6"><span style="font-weight:bold">Miscellaneous</span></td>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Ethical%20Considerations.md"> Ethical Considerations</td>
+    <td rowspan="6"><span style="font-weight:bold">6. Miscellaneous</span></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Ethical%20Considerations.md">6.1 Ethical Considerations</td>
     <td>Outline of ethical considerations in the design, building and use of WALDO</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Sustainability%20Considerations.md"> Sustainability considerations</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Sustainability%20Considerations.md"> 6.2 Sustainability considerations</td>
     <td>Outline of sustainability considerations in the design, building and use of WALDO</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/blog.md"> Blog</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/blog.md">6.3 Blog</td>
     <td>Rationale behind the blog and links to the blog posts</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Future%20Work.md"> Future Work</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Future%20Work.md">6.4 Future Work</td>
     <td>Discussion of present implementation and possible extensions to the project</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Leaflet.pdf">Leaflet</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Leaflet.pdf">6.5 Leaflet</td>
     <td>Informational leaflet on WALDO</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Poster.pdf">Poster</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Poster.pdf">6.6 Poster</td>
     <td>Poster for hackbooth and presentation</td>
   </tr>
 </table>
