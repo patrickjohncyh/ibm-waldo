@@ -1,4 +1,4 @@
-# Power Source
+# 4.2 Power Source
 
 A strong and stable power supply is needed to power WALDO. In order to choose an appropriate power supply, the power consumption of the individual components of WALDO first needs to be known. This is summarised in the table below. 
 

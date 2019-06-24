@@ -102,11 +102,11 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Contains Standard Tessellation Language (STL) files of the Jetson Nano case, the Pi case, the button support structure and WALDO’s eyepiece</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/4-2-Power_Source.md">4.2 Power Supply</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/4-2-Power-Supply.md">4.2 Power Supply</td>
     <td>Summary of considerations when choosing WALDO’s power supply</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/4-3-Hardware_List.md">4.3 Hardware List</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/4-Hardware/4-3-Hardware-List.md">4.3 Hardware List</td>
     <td>List of all hardware components used in assembly of WALDO</td>
   </tr>
   <tr>
