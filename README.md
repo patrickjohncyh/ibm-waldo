@@ -144,11 +144,11 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Discussion of present implementation and possible extensions to the project</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Leaflet.pdf">6.5 Leaflet</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/6-5-Leaflet.pdf">6.5 Leaflet</td>
     <td>Informational leaflet on WALDO</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/Poster.pdf">6.6 Poster</td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/6-Miscellaneous/6-6-Poster.pdf">6.6 Poster</td>
     <td>Poster for hackbooth and presentation</td>
   </tr>
 </table>
