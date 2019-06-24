@@ -7,6 +7,7 @@ As a device meant for use with vulnerable people and relying on a significant am
 * [Data Privacy](#data-privacy)
 * [Consequnces for Jobs](#consequences-for-jobs)
   
+<Br>
   
 ## User Privacy
 
