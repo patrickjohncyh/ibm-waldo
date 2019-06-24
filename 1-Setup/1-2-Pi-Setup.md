@@ -44,4 +44,4 @@ The Broadcom GPIO Numbers scheme (BCM)  is used in our implementation. This sche
 
 <Br>
 
-![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/Raspberry%20pi%203%20GPIO_pins_v2.png) "GPIO Pins")
+![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/Raspberry%20pi%203%20GPIO_pins_v2.png "GPIO Pins")
