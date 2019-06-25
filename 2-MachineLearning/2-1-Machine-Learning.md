@@ -87,7 +87,9 @@ Lastly, the dimensions (Depth x Width x Height x # Filters) of the input to a co
 
 After applying the above modifications, the model was observed to have \~3M parameters. The model was then run on the Jetson Nano and an infernece rate of \~0.125 inferences/s or 8 FPS was observed - sufficient for smooth, real-time gesture detection.
 
-To test the limits of the minimized model, it was trained with the training data (118,562 samples) from the Jester Dataset which has 27 classes. 80% of the training data was used as the training set and 20% of the training data was used as the validation set. The model was trained for 5 epochs and it had obtained a training accuracy of 88% and a validation accuracy of 87%. The team does believe that the model had overfitted yet (meaning that it was possible that the training and validation accuracy could still rise), but this provided sufficient evidence of the models’ capacity and capabilities.
+To test the limits of the minimized model, it was trained with the training data (118,562 samples) from the Jester Dataset which has 27 classes. 80% of the training data was used as the training set and 20% of the training data was used as the validation set. The model was trained for 5 epochs and it had obtained a training accuracy of 88% and a validation accuracy of 87%. The team does believe that the model had overfitted yet (meaning that it was possible that the training and validation accuracy could still rise), but this provided sufficient evidence of the models’ capacity and capabilities. Below, we have a high-level overview of the finalized model :
+
+![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/modeloverview.png) 
 
 #### 2.1.2.2 Training Model with Limited Dataset
 
