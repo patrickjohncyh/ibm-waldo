@@ -51,7 +51,7 @@ Refer to [CNN+LSTM Paper](https://static.googleusercontent.com/media/research.go
 
 #### 3)<space> MobileNetV2_L2Norm + LSTM
 
-Just like <b>MobileNetV2 + LSTM</b>, this model employs the use of 2D Convolution Networks pre-trained on Imagenet. For this model, the learnt spatial features are L2 normalised to become vectors of unit length before passing them into the LSTM module. 
+Just like <b>MobileNetV2 + LSTM</b>, this model employs the use of 2D Convolution Networks pre-trained on Imagenet. For this model, the learnt spatial features for each frame are L2 normalised to become vectors of unit length before passing them into the LSTM module. 
 
 Model achieved a slight boost in validation accuracy to <b>86.35%</b> on 5+1(No action) classes on 20BN-Jester dataset.
 
@@ -87,25 +87,27 @@ Lastly, the dimensions (Depth x Width x Height x # Filters) of the input to a co
 
 After applying the above modifications, the model was observed to have \~3M parameters. The model was then run on the Jetson Nano and an infernece rate of \~0.125 inferences/s or 8 FPS was observed - sufficient for smooth, real-time gesture detection.
 
-To test the limits of the minimized model, it was trained with the training data (118,562 samples) from the Jester Dataset which has 27 classes. 80% of the training data was used as the training set and 20% of the training data was used as the validation set. The model was trained for 5 epochs and it had obtained a training accuracy of 88% and a validation accuracy of 87%. The team does believe that the model had overfitted yet (meaning that it was possible that the training and validation accuracy could still rise), but this provided sufficient evidence of the models’ capacity and capabilities. Below, we have a high-level overview of the finalized model :
+To test the limits of the minimized model, it was trained with the training data (118,562 samples) from the Jester Dataset which has 27 classes. 80% of the training data was used as the training set and 20% of the training data was used as the validation set. The model was trained for 5 epochs and it had obtained a training accuracy of 88% and a validation accuracy of 87%. The team does believe that the model had overfitted yet (meaning that it was possible that the training and validation accuracy could still rise), but this provided sufficient evidence of the models’ capacity and capabilities. 
+
+Below is a high-level overview of the final model :
 
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/modeloverview.png) 
 
 #### 2.1.2.2 Training Model with Limited Dataset
 
-Given the time constraints, the collected dataset was not as large and diverse as that of the Jester Dataset. The dataset collection process is detailed [here](https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/data_collection.md). The team was only able to collect a total of 175 videos per class (5 in this case) for our training set. Of the 175 videos, 70 of them were of the three group members tasked with data collection, leaving 105 videos per class that is of random people. For our validation set, we had 50 videos per class, all of which are of random people.
+Given the time constraints, the collected dataset was not as large and diverse as that of the Jester Dataset. The dataset collection process is detailed [here](https://github.com/patrickjohncyh/ibm-waldo/blob/master/5-Administrative/5-4-Data-Collection.md). The team was only able to collect a total of 175 videos per class (5 in this case) for our training set. Of the 175 videos, 70 of them were of the three group members tasked with data collection, leaving 105 videos per class that is of random people. For our validation set, we had 50 videos per class, all of which are of random people.
 
 The model was trained on our dataset with 6 classes (5 actions + 1 no gesture). It was able to achieve a training accuracy of 98.8% and a validation accuracy of 91.6%. This appeared to be a very positive result, but the team was wary of the fact that our validation set had only a total of 300 samples.
 
 Data augmentation was deployed to circumvent the problem of limited data. Data augmentation is a technique to artificially create new training data from existing training data. The same affine transformations were applied to all the frames of a given video sample that is 30 frames in length. This involved random translation (+/- 20% in x and y axis) , scaling (80%-120%), rotation (+/- 5 deg) and shear (+/- 5 deg) within the ranges specified. In addition, contrast normalization (0.75-1.5) and additive gaussian noise were also introduced.
 
-Additionally, data from the Jester Dataset was also integrated into the model. Therefore, on top of the augmented data, the model was also trained with non-conflicting actions (i.e there is a _Thumb Up_ in Jester which clashes with the _Good_ action). Having more data from both our augmented dataset and the Jester dataset would enable the model to better learn the important spatio-temporal features for gesture recognition. Having additional gestures from Jester would force the model to learn a better representation of the gestures and to also focus on the salient parts of the data that are most pertinent to recognising gestures.
+Additionally, data from the Jester Dataset was also integrated into the final model. On top of the augmented data, the model was also trained with non-conflicting actions (i.e there is a _Thumb Up_ in Jester which clashes with the _Good_ action). Having more data from both our augmented dataset and the Jester dataset would enable the model to better learn the important spatio-temporal features for gesture recognition. Having additional gestures (classes) from Jester would guide the model into learning better representations of the gestures and to also focus on the salient parts of the data that are most pertinent to recognising gestures.
 
 ## 2.1.3 Conclusion
 
 The model is able to achieve a peak validation accuracy of 89.5%. Whilst at first glance, this may seem like a downgrade from the 91.6% obtained without augmentation, it is important to point out that the 89.5% validation accuracy was obtained over 26 classes (3 times more classes that before) and also on substantially more data (22,462 samples). This gave confidence that the validation loss and accuracy reflects well the model’s out of sample performance.
 
-Below is the plot of the final learning curve. The model used is **c3d_super_lite**, trained for 30 Epochs on the Jester Dataset combined with the collected dataset of 5 Makaton Signs. Augmentation was applied so the ratio of samples from each class was 1:1 across both datasets. **Adam** optimiser was used with **categorical crossentropy** as loss. The best model had a validation loss of 0.3683 and a validation accuracy of 0.9038.
+Below is the plot of the final learning curve. The model used is **c3d_super_lite**, trained for 30 Epochs on the Jester Dataset combined with the collected dataset of 5 Makaton Signs. Augmentation was applied so the ratio of number of samples from each class was 1:1 across both datasets. **Adam** optimiser was used with **categorical crossentropy** as loss. The best model had a validation loss of 0.3683 and a validation accuracy of 0.9038.
 
 Actions used:
 
