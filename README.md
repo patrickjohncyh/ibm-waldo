@@ -11,7 +11,7 @@ People with learning disabilities can encounter difficulty in expressing themsel
 * Programmable buttons for users to quickly express pre-set phrases or emotions
 
 Intended Use
-------------
+---
 
 WALDO is intended for use in a care home setting in the following ways:
 
@@ -31,7 +31,7 @@ This implementation enables people with learning disabilities that have difficul
 
 
 Device Components
------------
+---
 
 To achieve the aims outlined above, this group has implemented WALDO using the following components, as will be outlined in this Virtual Design History File.
 
@@ -152,3 +152,16 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Poster for hackbooth and presentation</td>
   </tr>
 </table>
+
+Acknowledgements
+---
+
+The WALDO team consists of 5 students from the Electrical Engineering (EE) Department of Imperial College London. The key tasks performed by each member is as follows,
+
+1. [Joshua Chan](https://github.com/josh8chan) : Administrative, Data Collection, Peripheral Sensors Implementation 
+2. [Lua Ying Hao](https://github.com/Kaynelua) : Jetson Nano Implementation, Machine Learning
+3. [Ng Yi Song](https://github.com/NgYiSong) : Data Collection, Peripheral Sensors Implementation
+4. [Patrick John Chia](https://github.com/patrickjohncyh) : Jetson Nano Implementation, Machine Learning
+5. [Yeow En Kai Joel](https://github.com/joelyeow) : Administrative, Data Collection and Processing, Peripheral Sensors Implementation 
+
+
