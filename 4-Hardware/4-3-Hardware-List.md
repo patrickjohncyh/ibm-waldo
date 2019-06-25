@@ -27,4 +27,4 @@ The following table shows the various components bought and used in the assembly
 
 <Br>
   
-> Also note that this list does not show the cost of each item. The Bill of Materials (which shows the cost of each item) can be found by navigating to "5-Adminisitrative > Bill_of_Materials.md".
+> Also note that this list does not show the cost of each item. The Bill of Materials (which shows the cost of each item) can be found by navigating to "5-Adminisitrative > Bill-of-Materials.md".
