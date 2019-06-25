@@ -2,14 +2,13 @@
 ==================
 Setting up a Raspberry Pi and OS :
 
-1. A micro SD card is required to store Raspbian OS, and a power source of 2.5W is required to boot up the Raspberry Pi. 
-2. Most sellers would have prepared an SD card with the Pi that is set up with Raspbian OS. If the sellers have provided an SD card with the OS, skip to step 5, if not, continue to step 3.
-3. The first step to downloading the OS would be to head to the Raspberry Pi Downloads page from this link:  https://www.raspberrypi.org/downloads/  This link contains the files to download the NOOBS files which would be flashed into the SD card. The guide to formatting and copying of files over to the SD card can be found here:  https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
-4. After the files have been extracted and copied into the Pi, start to connect the Pi up. 
-5. Insert the SD card into the underside of the Pi. Connect the mouse and keyboard to the USB ports on the Pi. Lastly connect the HDMI cable from the Pi to a monitor or a TV screen for the video output. 
-6. An ethernet cable can be connected to the Pi if you wish to use the ethernet cable for internet connection. This might not be necessary as Raspberry Pi 3 should be able to connect wirelessly via WiFi.
-7. Connect the power cable to the Pi. With all prior steps done, the video output would display a boot up screen and the Pi would be fully loaded on.  
-8. The final step to the set up would be to adjust the time and date setting as well as a language option for the Pi. With all these done, the Pi is set up and ready to go. 
+1. A micro SD card is required to store Raspbian OS, and a power source of 5V and a minimum of 2.5A is [recommended](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/2) to power the Raspberry Pi 3. 
+2. If an SD with Raspbian OS has been provided with the Pi, skip to step 5. If not, continue to step 3.
+3. The first step to downloading the OS would be to head to the Raspberry Pi Downloads page from this [link](https://www.raspberrypi.org/downloads/). This link contains the files to download the NOOBS files which would be flashed into the SD card. The guide to formatting and copying of files over to the SD card can be found [here](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3). 
+4. Insert the SD card into the underside of the Pi. Connect the mouse and keyboard to the USB ports on the Pi. Lastly connect the HDMI cable from the Pi to a computer display the video output. 
+5. Internet connectivity can either be through an Ethernet cable or through WiFi.
+6. Connect the power cable to the Pi. The video output would display a boot up screen.
+7. Adjust the date and time settings and language option for the Pi.
 
 
 ## Go To
@@ -17,33 +16,36 @@ Setting up a Raspberry Pi and OS :
 * 1.2.2 [Installation of Packages](#122-installation-of-packages)
 * 1.2.3 [GPIO Numbering Schemes](#123-gpio-numbering-schemes)
 
-<Br>
-  
-1.2.1 Ensuring Pi is running an up to date OS version
-------------------------------------------------
+1.2.1 Checking Pi OS Version
+---
 
 The OS of the Pi must be checked to ensure that it is compatible with the setup described. 
 
 In the current implementation, the Pi runs on Raspbian 1.2. Do make sure that the OS on your Pi is at least 1.2 or newer. This can be checked by entering the following command on the Pi’s terminal: `cat /etc/os-release`. 
 
-<Br>
-
 1.2.2 Installation of Packages
-------------------------
+---
 
-In the code “IBM_text_to_speech.py”, it utilises the IBM Watson text to speech function to generate the audio files. In order to use that function, the IBM Watson text to speech must first be installed onto the Pi. This is done by entering `sudo pip3 install ibm-watson` in the terminal. 
+1) IBM Watson Text-to-Speech is used to generate the audio files corresponding to detected Makaton Action or preset phrase. The IBM Watson API for python3 is required for this.
 
-In “main.py”, the NumPy library is required to accurately determine the distance between the user and Waldo. Running  `sudo apt-get install python3-numpy` on the terminal will install the package on the Pi. 
+To install, run the following command in Terminal,
 
-<Br>
+```
+sudo pip3 install ibm-watson
+``` 
 
+2) NumPy library is used to perform certain mathematical computations. 
+
+To install, run the following command in Terminal,
+
+```
+sudo apt-get install python3-numpy
+```
 1.2.3 GPIO Numbering Schemes
-----------------------
+---
 
-The Broadcom GPIO Numbers scheme (BCM)  is used in our implementation. This scheme would mean that the pins are identified by their GPIO numbers instead of the pin numbering on the board. An example would be in "main.py” input 1 is written as 22, which corresponds to pin 15 on the Pi, which is labelled as GPIO22 instead of pin 22 on the Pi. 
+The Broadcom GPIO Numbers scheme (BCM) is used in this implementation. This scheme would mean that the pins are identified by their GPIO numbers instead of the pin numbering on the board. For example, in "main.py” input 1 is written as 22, which corresponds to Pin 15 on the Pi, which is labelled as GPIO22 instead of Pin 22 on the Pi. 
 
-The image below shows the numbering of pins, as well as the GPIO tagged to the pins on the board. As mentioned above, in the BCM scheme, the GPIO numbers are used instead of the actual pin numbering on the board labelled as 1-40. 
-
-<Br>
+The image below is provided for easy reference. It shows the numbering of pins, as well as the GPIO tagged to the pins on the board. As mentioned above, in the BCM scheme, the GPIO numbers are used instead of the actual pin numbering on the board labelled as 1-40. 
 
 ![alt text](https://github.com/patrickjohncyh/ibm-waldo/blob/master/imgs/Raspberry%20pi%203%20GPIO_pins_v2.png "GPIO Pins")

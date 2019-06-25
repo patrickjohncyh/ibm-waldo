@@ -104,7 +104,7 @@ $ import tensorflow
 
 It is important to install OpenCV from source so as to reap the benefits of CUDA GPU acceleration.
 
-1. Navigate to the waldo directory
+1. On the Jetson Nano, navigate to the jetson-execution directory
 
 2. Run the installation script for OpenCV
 
