@@ -1,7 +1,7 @@
 
 1.1 Jetson Nano Setup
 ===
-This section details a step-by-step guide to successfully setup the environment for the Jetson Nano to perform Makaton sign recognition on a live video input from a webcam.
+This section provides a step-by-step guide to successfully setup the environment for the Jetson Nano to perform Makaton sign recognition on a live video input from a webcam.
 
 ## Go To
 * 1.1.1 [Operating System Setup](#111-operating-system-setup)
@@ -54,7 +54,7 @@ If facing power issues when running on a battery pack. The operating mode of the
 ```$ /usr/sbin/nvpmodel -m 1```
 3. To make Mode 1 default,
 	1. `$ sudo nano /etc/nvpmodel/nvpmodel_t210_jetson-nano.conf`
-	2. At the bottom of the file, change ‘PM_CONFIG DEAFULT=N’, where N is the desired Mode (i.e 0 or 1)
+	2. At the bottom of the file, change `PM_CONFIG DEAFULT=N`, where N is the desired Mode (i.e 0 or 1)
 4. It is possible to create a custom operating mode based on your requirements. For further information please refer to the official [documentation](https://docs.nvidia.com/jetson/l4t/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fpower_management_nano.html%23).
  
 1.1.5 Tensorflow Installation
@@ -89,7 +89,7 @@ $ sudo pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six moc
 5. Install the NVIDIA release of tensorflow-gpu for Jetson Nano
 
 ```
-$ sudo pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==$1.13.1+nv NEED CHECK
+$ sudo pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==$1.13.1+nv19.3
 ```
 
 6. Verify that tensorflow-gpu is installed by importing into python3
