@@ -120,7 +120,7 @@ Script obtained from https://github.com/AastaNV/JEP/blob/master/script/install_o
 Installing Jetson GPIO for python3.6 will enable control of the Jetson GPIO pins with python.
 
 ```
-sudo pip3 install  PUT ACTUAL PACAKGE HERE
+sudo pip3 install Jetson.GPIO
 ```
 
 
