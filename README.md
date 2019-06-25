@@ -48,11 +48,11 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   <tr>
     <td rowspan="3"><span style="font-weight:bold">1. Setup</span></td>
     <td> <a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/1-1-Jetson-Setup.md">1.1 Jetson Nano Setup</a></td>
-    <td>Setting up Jetson Nano</td>
+    <td>Jetson Nano Setup Guide</td>
   </tr>
   <tr>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/1-2-Pi-Setup.md">1.2 Pi Setup</a></td>
-    <td>Setting up Raspberry Pi</td>
+    <td>Raspberry Pi Setup Guide</td>
   </tr>
   <tr>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/1-3-Hardware-Connections.md">1.3 Hardware Setup</a></td>
@@ -61,22 +61,22 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   <tr>
     <td rowspan="5"><span style="font-weight:bold">2. Machine Learning</span></td>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/server-training"> Server Training Code</a></td>
-    <td>Code to be run on server for further model training beyond 5 makaton signs</td>
+    <td>Code to be run on server for model training</td>
   </tr>
   <tr>
     <td><a href ="https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/jetson-execution">Jetson Nano Execution Code</a></td>
-    <td>Code to be run on Jetson Nano for running sign recognition</td>
+    <td>Code to be run on Jetson Nano for Makaton sign recognition</td>
   </tr>
   <tr>
     <td><a href = "https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/jetson-execution/checkpoint_models"> Model and Weights</a></td>
     <td>Saved weights of the final trained model</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-1-MachineLearning.md"> 2.1 Machine Learning </a></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-1-Machine-Learning.md"> 2.1 Machine Learning </a></td>
     <td>Details model design history and evolution as well as implementation on the edge device</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-2-ServerEnvironmentSetup.md"> 2.2 Server environment setup for further model training</a></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-2-Server-Environment-Setup.md"> 2.2 Server environment setup for further model training</a></td>
     <td>Setting up server environment to train model to recognise more than 5 Makaton signs</td>
   </tr>
   <tr>
