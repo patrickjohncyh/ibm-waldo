@@ -167,12 +167,8 @@ The WALDO team consists of 5 students from the Electrical Engineering (EE) Depar
 We would like to thank:
 
 1. Dr Steve Wright, for his invaluable guidance and encouragement throughout the project
- 
 2. Louise Cooper, John McNamara & Emily Larkin from IBM for their clear direction and unwavering support in the implementation of this project
-
 3. Precious Homes, for supporting this project by providing valuable insight into the use of Makaton, as well as training videos
-
 4. Vic, May & Amine at the teaching labs, for their untiring technical support
-
 5. All who volunteered their time to help us in the collection of training data
 
