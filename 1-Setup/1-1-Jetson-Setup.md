@@ -135,9 +135,13 @@ https://www.jetsonhacks.com/2019/04/14/jetson-nano-use-more-memory/
 1.1.9 GPU Verification
 ---
 Enter the 2-MachineLearning/jetson-execution folder,
-Run `python3 sanity/tf-test.py` to verify that the Jetson Nano GPU is being utilised by tensorflow.
+Run `python3 sanity/tf-test.py` to verify that the Jetson Nano GPU is being utilised by tensorflow. The output should show that there is one GPU allocated.
 
 1.1.10 Running the Model
 ---
 In the 2-MachineLearning/jetson-execution folder,
-start the demo by running the following command in terminal,`python3 demo.py`
+start the demo by running the following command in terminal,
+
+```
+sudo python3 demo.py
+```
