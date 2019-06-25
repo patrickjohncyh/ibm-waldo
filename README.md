@@ -47,15 +47,15 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td rowspan="3"><span style="font-weight:bold">1. Setup</span></td>
-    <td> <a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/JetsonSetup.md">1.1 Jetson Nano Setup</a></td>
+    <td> <a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/1-1-Jetson-Setup.md">1.1 Jetson Nano Setup</a></td>
     <td>Setting up Jetson Nano</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/pisetup.md">1.2 Pi Setup</a></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/1-2-Pi-Setup.md">1.2 Pi Setup</a></td>
     <td>Setting up Raspberry Pi</td>
   </tr>
   <tr>
-    <td><a href = "https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/HardwareConnections.md">1.3 Hardware Setup</a></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/1-Setup/1-3-Hardware-Connections.md">1.3 Hardware Setup</a></td>
     <td>Diagram of device hardware connections</td>
   </tr>
   <tr>
