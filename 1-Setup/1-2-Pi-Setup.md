@@ -5,11 +5,11 @@ This section provides a step-by-step guide on how to setup the Rasberry Pi 3 env
 
 ## Go To
 * 1.2.1 [Setting up a Raspberry Pi and OS](#121-setting-up-raspberry-pi-and-raspbian-os)
-* 1.2.2 [Ensuring Pi is running an up to date OS version](#122-ensuring-pi-is-running-an-up-to-date-os-version)
+* 1.2.2 [Ensuring Pi is running an up to date OS version](#122-checking-pi-os-version)
 * 1.2.3 [Installation of Packages](#123-installation-of-packages)
 * 1.2.4 [GPIO Numbering Schemes](#124-gpio-numbering-schemes)
 
-1.2.1 Setting up Raspberry Pi and Raspbian OS :
+1.2.1 Setting up Raspberry Pi and Raspbian OS
 ---
 1. A micro SD card is required to store Raspbian OS, and a power source of 5V and a minimum of 2.5A is [recommended](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/2) to power the Raspberry Pi 3. 
 2. If an SD with Raspbian OS has been provided with the Pi, skip to step 4. If not, continue to step 3.
