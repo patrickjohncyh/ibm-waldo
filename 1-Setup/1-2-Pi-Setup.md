@@ -3,7 +3,7 @@
 Setting up a Raspberry Pi and OS :
 
 1. A micro SD card is required to store Raspbian OS, and a power source of 5V and a minimum of 2.5A is [recommended](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/2) to power the Raspberry Pi 3. 
-2. If an SD with Raspbian OS has been provided with the Pi, skip to step 5. If not, continue to step 3.
+2. If an SD with Raspbian OS has been provided with the Pi, skip to step 4. If not, continue to step 3.
 3. The first step to downloading the OS would be to head to the Raspberry Pi Downloads page from this [link](https://www.raspberrypi.org/downloads/). This link contains the files to download the NOOBS files which would be flashed into the SD card. The guide to formatting and copying of files over to the SD card can be found [here](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3). 
 4. Insert the SD card into the underside of the Pi. Connect the mouse and keyboard to the USB ports on the Pi. Lastly connect the HDMI cable from the Pi to a computer display the video output. 
 5. Internet connectivity can either be through an Ethernet cable or through WiFi.
