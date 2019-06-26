@@ -36,7 +36,7 @@ In the current implementation, the Pi runs on Raspbian 1.2. Do make sure that th
 To install, run the following command in Terminal,
 
 ```
-sudo pip3 install ibm-watson
+$ sudo pip3 install ibm-watson
 ``` 
 
 2) NumPy library is used to perform certain mathematical computations. 
@@ -44,12 +44,12 @@ sudo pip3 install ibm-watson
 To install, run the following command in Terminal,
 
 ```
-sudo apt-get install python3-numpy
+$ sudo apt-get install python3-numpy
 ```
 1.2.4 GPIO Numbering Schemes
 ---
 
-The Broadcom GPIO Numbers scheme (BCM) is used in this implementation. This scheme would mean that the pins are identified by their GPIO numbers instead of the pin numbering on the board. For example, in [3-Pi/pi-execution/main.py](https://github.com/patrickjohncyh/ibm-waldo/blob/master/3-Pi/pi-execution/main.py) input 1 is written as 22, which corresponds to Pin 15 on the Pi, which is labelled as GPIO22 instead of Pin 22 on the Pi. 
+The Broadcom GPIO Numbers scheme (BCM) is used in this implementation. This scheme would mean that the pins are identified by their GPIO numbers instead of the pin numbering on the board. For example, in [3-Pi/pi-execution/main.py](https://github.com/patrickjohncyh/ibm-waldo/blob/master/3-Pi/pi-execution/main.py), input 1 is written as 22, which corresponds to Pin 15 on the Pi, which is labelled as GPIO22 instead of Pin 22 on the Pi. 
 
 The image below is provided for easy reference. It shows the numbering of pins, as well as the GPIO tagged to the pins on the board. As mentioned above, in the BCM scheme, the GPIO numbers are used instead of the actual pin numbering on the board labelled as 1-40. 
 
