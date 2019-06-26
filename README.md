@@ -60,6 +60,14 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
   </tr>
   <tr>
     <td rowspan="5"><span style="font-weight:bold">2. Machine Learning</span></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-1-Machine-Learning.md"> 2.1 Machine Learning </a></td>
+    <td>Details model design history and evolution as well as implementation on the edge device</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-2-Server-Environment-Setup.md"> 2.2 Server Environment Setup</a></td>
+    <td>Setting up server environment for further model training</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/server-training"> Server Training Code</a></td>
     <td>Code to be run on server for model training</td>
   </tr>
@@ -71,14 +79,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td><a href = "https://github.com/patrickjohncyh/ibm-waldo/tree/master/2-MachineLearning/jetson-execution/checkpoint_models"> Model and Weights</a></td>
     <td>Saved weights of the final trained model</td>
   </tr>
-  <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-1-Machine-Learning.md"> 2.1 Machine Learning </a></td>
-    <td>Details model design history and evolution as well as implementation on the edge device</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/2-MachineLearning/2-2-Server-Environment-Setup.md"> 2.2 Server environment setup for further model training</a></td>
-    <td>Setting up server environment to train model to recognise more than 5 Makaton signs</td>
-  </tr>
+
   <tr>
     <td rowspan="4"><span style="font-weight:bold">3. Raspberry Pi</span></td>
     <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi"> 3.1 Overview of Pi Function</a></td>
