@@ -37,7 +37,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
 
 <table>
   <tr>
-    <th width="17%">Section</th>
+    <th width="18%">Section</th>
     <th width="22%">Subsection</th>
     <th>Description</th>
   </tr>
