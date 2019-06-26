@@ -38,7 +38,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
 <table>
   <tr>
     <th>Section</th>
-    <th>Subsection</th>
+    <th width="22%">Subsection</th>
     <th>Description</th>
   </tr>
   <tr>
@@ -86,12 +86,11 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Outline of functions and connections of Pi</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi/main.py"> main.py</td>
-    <td>Main function controlling operation of Pi</span></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi/pi-execution"> Pi Execution Code</td>
+    <td>Code to be run on Raspberry Pi for high level tasks and audio generations through the IBM Watson text to speech module</span></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi/IBM_text_to_speech.py"> IBM_text_to_speech.py</td>
-    <td>Python script to obtain text to speech output from IBM Watson</span></td>
+    
   </tr>
   <tr>
     
