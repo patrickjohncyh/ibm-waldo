@@ -30,10 +30,10 @@ Expression of pre-set phrases/emotions
 This implementation enables people with learning disabilities that have difficulty expressing themselves in speech to easily express everyday sentiments.
 
 
-Device Components
+Virtual Design History File Overview
 ---
 
-To achieve the aims outlined above, this group has implemented WALDO using the following components, as will be outlined in this Virtual Design History File.
+This is an overview of the various sections and subsections of WALDO's Virtual Design History File (VDHF). The VDHF details the developmental process of WALDO, the necessary steps to recreate it and the ethical and sustainability considerations of WALDO.
 
 <table>
   <tr>
