@@ -9,7 +9,7 @@ This section provides the basic instructions on how to setup a server to perform
 * 2.2.2 [Installing Python packages](#222-installing-python-packages)
 * 2.2.3 [Download 20BN-Jester Dataset](#223-download-20bn-jester-dataset)
 * 2.2.4 [Generate training CSV](#224-generate-training-csv)
-* 2.2.5 [Training](#225-start-training)
+* 2.2.5 [Training](#225-training)
 
 2.2.1 Installing Nvidia Driver, CUDA and cuDNN
 ---
