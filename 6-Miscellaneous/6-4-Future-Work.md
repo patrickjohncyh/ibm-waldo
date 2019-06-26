@@ -7,7 +7,6 @@ This section is a discussion of the present implementation and possible extensio
 * 6.4.2 [Improvements to Present Hardware](#642-improvements-to-present-hardware)
 * 6.4.3 [Addidtional Capabilities](#643-additional-capabilities)
 
-<Br>
   
 ## 6.4.1 Discussion of Present Implementation
 
@@ -21,8 +20,6 @@ The table below shows the capabilities of WALDO that have and have not been impl
 | 3.  	| User interface to change what expressions button presses output   	| **Not Implemented** - Strings that buttons output cannot be changed remotely, no user interface to change string output                 	|
 | 4.  	| Ambient sensors to analyse and understand the user’s surroundings 	| **Not Implemented**                                                                                                                     	|
 | 5.  	| Replicability of product                                          	| **Not Implemented** - Components are for prototyping use; low replicability of product                                                  	|
-
-<Br>
 
 ## 6.4.2 Improvements to Present Hardware
 
@@ -38,8 +35,6 @@ Presently, WALDO faces several challenges arising from the limited capabilities 
     
 -   Several functions of WALDO have been offloaded to a Raspberry Pi to relieve computational load on the Jetson. This increases the amount of physical electronic hardware that has to be placed in the toy
     
-<Br>
-  
 
 Using purpose-built electronic components in WALDO, with higher GPU RAM and more CPU cores or higher clock speeds, would obviate the need for two embedded devices to be present, reducing the physical space needed within the toy for electronic hardware and reducing the chance of failure of one of the components. In addition, using an appropriate battery, instead of a battery pack with a built-in safety mechanism, would allow computation to be performed at the embedded device’s full potential. A safety mechanism with a higher threshold could be used with the battery to ensure safety is not compromised.
 
@@ -47,7 +42,6 @@ Using purpose-built electronic components in WALDO, with higher GPU RAM and more
 
 The external physical components of WALDO could also stand to be improved. Improvements include sewing the electronic hardware onto the cotton of the device to improve robustness against rough handling, including a zip to allow easy access to WALDO’s interior devices, sewing holes into WALDO’s exterior to allow for convenient access to ports, and adding a physical on-off switch or a camera shutter for privacy.
 
-<Br>  
 
 ## 6.4.3 Additional Capabilities
 
@@ -62,9 +56,7 @@ The first, and most apparent, area in which WALDO could stand to be improved is 
 -   Using machine learning or pattern recognition to automatically preprocess videos for training. This process was hugely time-consuming when performed manually.
     
 -   Sourcing data from around the world, instead of only within the UK, to improve robustness of sign recognition
-    
-<Br>
-  
+      
 
 Another capability that could be integrated into WALDO’s Makaton interpretation is the ability to learn on-the-go. Presently, WALDO uses a pre-trained model and does not retain user data for additional training. If WALDO is used by an individual user for an extended period of time, on-the-go learning could be implemented to enable predictions to improve over time.
 
@@ -78,7 +70,6 @@ A user interface to change the expressions WALDO outputs when its buttons are pr
 
 Ambient sensors to analyse and understand the user’s environment have yet to be implemented. These sensors could be integrated with the Pi, sending information via the GPIO pins or tailor-made breakout boards and stored on the Pi for later analysis by medical professionals. Understanding the environment and possible risk factors is important in caring for people with learning disabilities[2], hence sensors that could be implemented include ambient light, sound and temperature sensors.
 
-<Br>
 
 ## Bibliography
 
