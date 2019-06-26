@@ -82,7 +82,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
 
   <tr>
     <td rowspan="4"><span style="font-weight:bold">3. Raspberry Pi</span></td>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi"> 3.1 Overview of Pi Function</a></td>
+    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/blob/master/3-Pi/3-1-Pi-Function.md"> 3.1 Overview of Pi Function</a></td>
     <td>Outline of functions and connections of Pi</td>
   </tr>
   <tr>
@@ -94,8 +94,7 @@ To achieve the aims outlined above, this group has implemented WALDO using the f
     <td>Python script to obtain text to speech output from IBM Watson</span></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/patrickjohncyh/ibm-waldo/tree/master/3-Pi#overall-pi-function">Logic flow diagram</a></td>
-    <td>Logic for Pi function</td>
+    
   </tr>
   <tr>
     <td rowspan="3"><span style="font-weight:bold">4. Hardware</span></td>
