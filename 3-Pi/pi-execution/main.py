@@ -18,7 +18,7 @@ makin2 = 11
 makin1 = 10 #msb
 
 def playSound(fileNum):
-        os.system('aplay ' + '/home/pi/Desktop/audio_files/'+str(fileNum)+ '.wav')
+        os.system('aplay ' + 'audio_files/'+str(fileNum)+ '.wav')
 
 def main():
     print('Script Running')
