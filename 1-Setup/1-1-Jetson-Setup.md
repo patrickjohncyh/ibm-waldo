@@ -114,7 +114,7 @@ sudo ./install_opencv4.0.0_Nano.sh .
 
 Script obtained from https://github.com/AastaNV/JEP/blob/master/script/install_opencv4.0.0_Nano.sh
 
-1.1.7 Jetson GPIO Installaton
+1.1.7 Jetson GPIO Installation
 ---
 
 Installing Jetson GPIO for python3.6 will enable control of the Jetson GPIO pins with python.
