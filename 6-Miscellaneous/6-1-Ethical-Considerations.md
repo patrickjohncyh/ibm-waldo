@@ -4,8 +4,8 @@ As a device meant for use with vulnerable people and relying on a significant am
   
 ## Go To 
 * 6.1.1 [User Privacy](#611-user-privacy)
-* 6.1.2 [Data Privacy](#data-privacy)
-* 6.1.3 [Consequnces for Jobs](#consequences-for-jobs)
+* 6.1.2 [Data Privacy](#612-data-privacy)
+* 6.1.3 [Consequnces for Jobs](#613-consequences-for-jobs)
   
 ## 6.1.1 User Privacy
 
