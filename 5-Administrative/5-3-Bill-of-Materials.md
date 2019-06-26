@@ -2,7 +2,6 @@
 
 The following table shows the various components bought and used in the assembly of WALDO:
 
-<Br>
 
 | Item                                 	| Product Description                                                                                                                                                                  	| Manufacturer    	| Quantity 	| Total Price / £ 	|
 |--------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------	|----------	|-----------------	|
@@ -22,6 +21,5 @@ The following table shows the various components bought and used in the assembly
 | Hook and Loop Fasteners- Velcro Tape 	| VELCRO Brand Stick On For,Fabrics Tape, 19 mm x 60 cm - White                                                                                                                        	| Velcro Brand    	| 1        	| 3.79            	|
 | **Total Cost**                           	| -                                                                                                                                                                                    	| -               	| -        	| **£419.13**         	|
 
-<Br>
 
 This amounts to a total of £419.13, which would be rather costly for mass production. The significant chunks of the cost can be attributed to Jetson Nano Developer Kit, the Raspberry Pi, the portable power bank and the webcam. However, a lot of the costs can be reduced through further research and development. For example, not all the features of the Jetson Nano Developer Kit and Raspberry Pi were used. As such, an embedded device to replace both the Jetson Nano and Raspberry Pi could be developed to be tailored specifically for the needs of Waldo. This would in turn cut costs on the power supply used, since there would not be a need for such a large power bank to power both the Jetson Nano and the Raspberry Pi. In other words, a specifically customised rechargeable battery could be used instead, which would save on costs and space.
